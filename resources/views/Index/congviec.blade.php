@@ -9,13 +9,10 @@
     <title>DAILY WORK</title>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/trello.css" rel="stylesheet">
-
 </head>
-
 <body>
 <!-- Page Wrapper -->
 <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e">
         <!-- Sidebar - Brand -->
@@ -77,7 +74,6 @@
             </span>
         </div>
     </ul>
-
     <div style="width: 100%">
         <!-- Topbar -->
         <nav class="navbar navbar-light bg-gray-400 topbar mb-4 static-shadow">
@@ -92,7 +88,6 @@
                 @foreach($congviec as $Congviec)
                     {{$Congviec -> Tenduan}}
                 @endforeach
-
                 <a name="" id="" class="btn btn-primary " href="" role="button" style="margin-left: 600px">Hoàn thành</a>
                 <a name="" id="" class="btn btn-primary " href="" role="button" >Chưa hoàn thành</a>
             </h2>
@@ -139,7 +134,6 @@
                         @endforeach
                     </ul>
                 </div>
-
                 <!-- <div ng-ap="myapp" ng-controller="member">
                 <form>
                           <input type="text" ng-model="ID">
