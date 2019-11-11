@@ -13,6 +13,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function quanly()
+    {
+       return (view('Admin.quanly'));
+    }
     public function congviec()
     {
         $congviec = Member_model::all();
