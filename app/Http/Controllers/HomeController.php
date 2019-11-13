@@ -24,20 +24,18 @@ class HomeController extends Controller
             'congviec' => $congviec,
         ]);
     }
-  public function postbai(){
-        $postbai= Member_model::all();
-        return view('index.postbai',[
-            'postbai'=>$postbai,
-        ]);
-  }
+      public function postbai(){
+            $postbai= Member_model::all();
+            return view('index.postbai',[
+                'postbai'=>$postbai,
+            ]);
+      }
   public function duan(){
         $duan=Member_model::all();
         return View('index.duan',[
             'duan'=>$duan,
         ]);
   }
-
-
     /**
      * Show the form for creating a new resource.
      *

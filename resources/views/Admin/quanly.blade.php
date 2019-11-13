@@ -26,12 +26,10 @@
 
 <div id="wrapper">
 <!-- #Top Bar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-        </div>
-        <div class="sidebar-brand-text mx-3">DAILY-WORK<sup>(^^)</sup></div>
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+        <div style="color: white" >DAILY-WORK<sup>(^^)</sup></div>
     </a>
     <!-- Divider -->
     <hr class="sidebar-divider my-3">
@@ -40,51 +38,20 @@
     </li>
     <br>
     <li>
-        User:  <span style="color: white"> van tan</span>
+        <span style="color: white">ADMIN</span>
     </li>
     <hr>
     <!-- Nav Item - Dashboard -->
     <li>
-        <a href="duan" class="btn btn-primary btn-icon-split">
+        <a href="" class=" btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
-            <span class="text" style="background-color: #1c294e">DỰ ÁN</span>
-        </a>
-    </li>
-    <hr class="sidebar-divider my-3">
-    <li>
-        <a href="congviec" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white">
-                      <i class="fas fa-flag"></i>
-                    </span>
-            <span class="text" style="background-color: #1c294e;">CÔNG VIỆC</span>
-        </a>
-    </li>
-    <hr class="sidebar-divider my-3">
-    <li>
-        <a href="postbai" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-            <span class="text" style="background-color: #1c294e">BÁO CÁO</span>
+            <span class="text" >DỰ ÁN</span>
         </a>
     </li>
     <!-- Sidebar Toggler (Sidebar) -->
     <hr class="sidebar-divider my-3">
-
-    <div class="text-lg-right " style="margin-top:40px">
-            <span id="sidebarToggle"> <span class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                    <span class="text" style="background-color: #a3b6ee">↔</span>
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                </span>
-            </span>
-    </div>
 </ul>
 
 <div style="width: 100%" class="content">
@@ -149,7 +116,6 @@
                                                 <td>
 {{--                                                    <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >Sửa</button>--}}
                                                     <button class="glyphicon glyphicon-remove btn btn-danger btn-xs btn-delete" ng-click="cfDelete(da.id)">Xóa</button>
-
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -162,7 +128,6 @@
                                                     <div class="modal-header">
 {{--                                                        <h4 class="modal-title">{{ frmTitle }}</h4>--}}
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
                                                     </div>
                                                     <div class="modal-body" >
                                                         <form name="frmDuAn" action="getAdd" method="POST" class="form-horizontal">
