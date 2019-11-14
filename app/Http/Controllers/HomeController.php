@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Member_model;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+//use App\DuAn;
 
 class HomeController extends Controller
 {
@@ -17,11 +18,13 @@ class HomeController extends Controller
     {
        return (view('Admin.quanly'));
     }
-    public function congviec()
+    public function congviec($id)
     {
-        $congviec = Member_model::all();
+        $user = Member_model::find($id);
+        $tenduan = DB::table('member_models')->join('du_ans','du_ans.id_member','=','member_models.id')->where('member_models.id','=',$id)->get();
         return view('index.congviec',[
-            'congviec' => $congviec,
+            'user' => $user,
+            'user' =>$tenduan,
         ]);
     }
       public function postbai(){
@@ -30,12 +33,12 @@ class HomeController extends Controller
                 'postbai'=>$postbai,
             ]);
       }
-  public function duan(){
-        $duan=Member_model::all();
-        return View('index.duan',[
-            'duan'=>$duan,
-        ]);
-  }
+      public function duan(){
+            $duan=Member_model::all();
+            return View('index.duan',[
+                'duan'=>$duan,
+            ]);
+      }
     /**
      * Show the form for creating a new resource.
      *
@@ -55,7 +58,6 @@ class HomeController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *

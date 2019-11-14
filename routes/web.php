@@ -22,10 +22,10 @@
 //use Illuminate\Routing\Route;
 
 
-//Route::get('', 'HomeController@congviec');
-//Route::get('/','HomeController@duan');
-//Route::get('/','HomeController@postbai');
-Route::get('/','HomeController@quanly');
+    Route::get('', 'HomeController@congviec');
+Route::get('/','HomeController@duan');
+Route::get('/','HomeController@postbai');
+//Route::get('/','HomeController@quanly');
 
 Route::get('duan','HomeController@duan');
 Route::get('congviec','Homecontroller@congviec');

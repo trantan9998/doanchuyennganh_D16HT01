@@ -15,20 +15,17 @@ class CreateMemberModelsTable extends Migration
     {
         Schema::create('member_models',
             function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->string('Tenduan');
-                $table->string('Tencongviec');
-                $table->string('Tenchucnang');
+                $table->integer('id_member');
+                $table ->string ('nguoithuchien');
                 $table->string('Tiendo');
-                $table->string('Hoanthanh');
-                $table->dateTime('Ngaybatdau');
-                $table->dateTime('Ngayketthuc');
+                $table->string('mucdoHoanthanh');
                 $table->string ('noidung');
-                $table->string ('uploadfile');
+                $table->string ('upload_hinhanh');
+                $table->string ('upload_file');
+//                $table->foreign('id_member')->references('id')->on('du_ans');
                 $table->timestamps();
             });
     }
-
     /**
      * Reverse the migrations.
      *
