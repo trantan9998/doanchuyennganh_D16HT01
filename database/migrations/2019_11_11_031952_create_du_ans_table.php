@@ -19,9 +19,15 @@ class CreateDuAnsTable extends Migration
             $table->string('cacchucnang');
             $table->string ("tencongviec");
             $table->string('nhiemvu');
-            $table->string('ngaybatdau');
+            $table->string('ngaybatdau') ;
             $table->string('ngayketthuc');
-            $table->integer('id_member')->unsigned();
+//            $table->integer('id_member')->unsigned();
+//            $table->index(['id_member']);
+            $table->unsignedBigInteger('id_member')->comment('Mã loại sản phẩm, khóa ngoại');
+            $table->foreign('id_member')
+                ->references('id')->on('member_models')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

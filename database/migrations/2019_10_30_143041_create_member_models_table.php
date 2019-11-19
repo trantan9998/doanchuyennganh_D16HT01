@@ -15,15 +15,16 @@ class CreateMemberModelsTable extends Migration
     {
         Schema::create('member_models',
             function (Blueprint $table) {
-                $table->integer('id_member');
+                $table->bigIncrements('id');
                 $table ->string ('nguoithuchien');
                 $table->string('Tiendo');
                 $table->string('mucdoHoanthanh');
                 $table->string ('noidung');
-                $table->string ('upload_hinhanh');
-                $table->string ('upload_file');
+                $table->string ('upload_hinhanh')->nullable();
+                $table->string ('upload_file')->nullable();
 //                $table->foreign('id_member')->references('id')->on('du_ans');
                 $table->timestamps();
+
             });
     }
     /**

@@ -9,7 +9,6 @@
     <title>DAILY WORK</title>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/trello.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -89,7 +88,6 @@
                 @foreach($duan as $Duan)
                     {{$Duan -> Tenduan}}
                 @endforeach
-
             </h2>
         </nav>
         <br>
@@ -107,14 +105,12 @@
                 <div class="list" style="background-color:goldenrod" >
                     <h3 class="list-title" style="color: white">CHI PHÍ CHO DỰ ÁN</h3>
                     <ul class="list-items">
-
                     </ul>
                     {{--                <button class="add-card-btn btn">Add a card</button>--}}
                 </div>
                 <div class="list" style="background-color: #1F77D0">
                     <h3 class="list-title" style="color: white">THỜI GIAN DỰ KIẾN BẮT ĐẦU</h3>
                     <ul class="list-items">
-
                     </ul>
                 </div>
                 <div class="list" style="background-color: firebrick" >
@@ -134,8 +130,6 @@
                   </form>
                 </div> -->
             </section>
-
-
         </div>
 
     </div>

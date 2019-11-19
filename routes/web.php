@@ -22,14 +22,18 @@
 //use Illuminate\Routing\Route;
 
 
-    Route::get('', 'HomeController@congviec');
+Route::get('', 'HomeController@congviec');
 Route::get('/','HomeController@duan');
 Route::get('/','HomeController@postbai');
-//Route::get('/','HomeController@quanly');
 
+Route::get('/','HomeController@doan');
 Route::get('duan','HomeController@duan');
 Route::get('congviec','Homecontroller@congviec');
 Route::get('postbai','HomeController@postbai');
+Route::get('quanly','HomeController@quanly');
+
+//Route::get('doan','HomeController@duan');
+//Route::get('/','HomeController@quanly');
 
 //Route::get('/', function () {
 //    return view('index');

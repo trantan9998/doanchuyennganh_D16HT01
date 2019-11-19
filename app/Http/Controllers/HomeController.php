@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Member_model;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-//use App\DuAn;
+use App\DuAn;
 
 class HomeController extends Controller
 {
@@ -24,7 +24,6 @@ class HomeController extends Controller
         $tenduan = DB::table('member_models')->join('du_ans','du_ans.id_member','=','member_models.id')->where('member_models.id','=',$id)->get();
         return view('index.congviec',[
             'user' => $user,
-            'user' =>$tenduan,
         ]);
     }
       public function postbai(){
@@ -39,6 +38,9 @@ class HomeController extends Controller
                 'duan'=>$duan,
             ]);
       }
+    public function doan(){
+        return View('doan');
+    }
     /**
      * Show the form for creating a new resource.
      *
