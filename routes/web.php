@@ -21,12 +21,15 @@
 //Route::get('/', 'HomeController@postbai');
 //use Illuminate\Routing\Route;
 
+//Route::get('/','HomeController@index');
 
-Route::get('', 'HomeController@congviec');
+use Illuminate\Support\Facades\Route;
+
+Route::get('/','HomeController@congviec');
 Route::get('/','HomeController@duan');
 Route::get('/','HomeController@postbai');
-
 Route::get('/','HomeController@doan');
+
 Route::get('duan','HomeController@duan');
 Route::get('congviec','Homecontroller@congviec');
 Route::get('postbai','HomeController@postbai');

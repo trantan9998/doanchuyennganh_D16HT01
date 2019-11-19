@@ -85,9 +85,9 @@
         </nav>
         <nav class="navbar navbar-light bg-gray topbar mb static-shadow">
             <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u>
-                @foreach($user as $User)
-                    {{$User -> tenduan}}
-                @endforeach
+{{--                @foreach($user as $User)--}}
+{{--                    {{$User -> tenduan}}--}}
+{{--                @endforeach--}}
                 <a name="" id="" class="btn btn-primary " href="" role="button" style="margin-left: 600px">Hoàn thành</a>
                 <a name="" id="" class="btn btn-primary " href="" role="button" >Chưa hoàn thành</a>
             </h2>

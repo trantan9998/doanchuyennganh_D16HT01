@@ -11,7 +11,6 @@ class Member_model extends Model
 //    public $timestamps =true;
     protected $fillable=[
         ];
-
     public function duan(){
         return $this ->belongsTo('app\DuAn');
     }

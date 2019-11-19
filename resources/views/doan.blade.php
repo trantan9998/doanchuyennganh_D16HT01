@@ -73,7 +73,7 @@
             <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u>
             </h2>
         </nav>
-        <img src="img/powerpoint-chen-anh.jpg" style="width:1000px;height: 400px;margin-left: 40px;">
+        <img src="img/powerpoint-chen-anh.jpg" style="width:1000px;height: 450px;margin-left: 40px;">
         <br>
     </div>
     <!-- Bootstrap core JavaScript-->

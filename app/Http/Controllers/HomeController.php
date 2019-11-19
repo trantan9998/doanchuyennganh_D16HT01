@@ -18,13 +18,16 @@ class HomeController extends Controller
     {
        return (view('Admin.quanly'));
     }
-    public function congviec($id)
+    public function congviec()
     {
-        $user = Member_model::find($id);
-        $tenduan = DB::table('member_models')->join('du_ans','du_ans.id_member','=','member_models.id')->where('member_models.id','=',$id)->get();
-        return view('index.congviec',[
-            'user' => $user,
-        ]);
+        return View('index.congviec');
+
+//        $user = Member_model::find($id);
+//        $tenduan = DB::table('member_models')->join('du_ans','du_ans.id_member','=','member_models.id')->where('member_models.id','=',$id)->get();
+//        return view('index.congviec',[
+//            'user' => $user,
+//        ]);
+
     }
       public function postbai(){
             $postbai= Member_model::all();
@@ -41,6 +44,15 @@ class HomeController extends Controller
     public function doan(){
         return View('doan');
     }
+//    public function index(){
+//        return View('taikhoan.index');
+//    }
+//    public function login(){
+//        return View('taikhoan.login');
+//    }
+//    public function signup(){
+//        return View('taikhoan.signup');
+//    }
     /**
      * Show the form for creating a new resource.
      *

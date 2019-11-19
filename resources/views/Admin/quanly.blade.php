@@ -47,7 +47,46 @@
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
-            <span class="text" >DỰ ÁN</span>
+            <span class="text" >QUẢN LÝ THÀNH VIÊN</span>
+        </a>
+    </li>
+    <hr>
+
+    <li>
+        <a href="" class=" btn-primary btn-icon-split" >
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+            <span class="text" >CHUYÊN ĐỀ DỰ ÁN 1</span>
+        </a>
+    </li>
+    <hr>
+
+    <li>
+        <a href="" class=" btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+            <span class="text" >CHUYÊN ĐỀ DỰ ÁN 2</span>
+        </a>
+    </li>
+    <hr>
+
+    <li>
+        <a href="" class=" btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+            <span class="text" >CHUYÊN ĐỀ DỰ ÁN 3</span>
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="" class=" btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+            <span class="text" >CHUYÊN ĐỀ DỰ ÁN 4</span>
         </a>
     </li>
     <!-- Sidebar Toggler (Sidebar) -->
@@ -65,8 +104,6 @@
 
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <!-- <button class="w3-button w3-xlarge w3-circle w3-teal">+</button> -->
-
-
                 <div class="info-box bg-pink hover-expand-effect">
                     <div class="icon">
                         <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-xlarge w3-circle w3-pink" ng-click="modal('add')">+</button>
