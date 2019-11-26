@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDuAnsTable extends Migration
+class CreateDuanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDuAnsTable extends Migration
      */
     public function up()
     {
-        Schema::create('du_ans', function (Blueprint $table) {
+        Schema::create('duan', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
             $table->string('tenduan');
             $table->string('cacchucnang');
@@ -21,16 +21,10 @@ class CreateDuAnsTable extends Migration
             $table->string('nhiemvu');
             $table->string('ngaybatdau') ;
             $table->string('ngayketthuc');
-//            $table->integer('id_member')->unsigned();
-//            $table->index(['id_member']);
-            $table->unsignedBigInteger('id_member')->comment('Mã loại sản phẩm, khóa ngoại');
-            $table->foreign('id_member')
-                ->references('id')->on('member_models')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -38,6 +32,6 @@ class CreateDuAnsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('du_ans');
+        Schema::dropIfExists('duan');
     }
 }

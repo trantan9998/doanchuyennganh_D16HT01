@@ -1,4 +1,3 @@
-
 <?php
 
 //index.php
@@ -9,7 +8,7 @@ session_start();
     <!DOCTYPE html>
 <html>
 <head>
-    <title>TÀI KHOẢN</title>
+    <title>AngularJS Register Login Script using PHP Mysql</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <style>
@@ -23,7 +22,8 @@ session_start();
 <body>
 <br />
 <h3 align="center">AngularJS Register Login Script using PHP Mysql</h3>
-<br/>
+<br />
+
 <div ng-app="login_register_app" ng-controller="login_register_controller" class="container form_style">
     <?php
     if(!isset($_SESSION["name"]))
@@ -111,7 +111,6 @@ session_start();
         $scope.closeMsg = function(){
             $scope.alertMsg = false;
         };
-
         $scope.login_form = true;
 
         $scope.showRegister = function(){

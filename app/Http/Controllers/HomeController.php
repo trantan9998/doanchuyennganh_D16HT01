@@ -44,15 +44,18 @@ class HomeController extends Controller
     public function doan(){
         return View('doan');
     }
-//    public function index(){
-//        return View('taikhoan.index');
-//    }
-//    public function login(){
-//        return View('taikhoan.login');
-//    }
-//    public function signup(){
-//        return View('taikhoan.signup');
-//    }
+    public function home(){
+        return View('taikhoan.Home');
+    }
+    public function login(){
+        return View('taikhoan.login');
+    }
+    public function register(){
+        return View('taikhoan.signup');
+    }
+    public function aa(){
+        return View('index.index');
+    }
     /**
      * Show the form for creating a new resource.
      *

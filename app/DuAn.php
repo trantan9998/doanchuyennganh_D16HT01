@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class DuAn extends Model
 {
-    protected $table = 'du_ans';
+    protected $table = 'duan';
     protected $guarded = [];
 
-    public function member_model(){
-        return $this -> hasMany('app\Member_model');
-    }
+//    public function member_model(){
+//        return $this -> hasMany('app\Member_model');
+//    }
 }

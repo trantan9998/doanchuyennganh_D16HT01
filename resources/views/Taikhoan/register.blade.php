@@ -45,9 +45,7 @@ else
 
 if(empty($error))
 {
-    $query = "
- INSERT INTO register (name, email, password) VALUES (:name, :email, :password)
- ";
+    $query = " INSERT INTO register (name, email, password) VALUES (:name, :email, :password) ";
     $statement = $connect->prepare($query);
     if($statement->execute($data))
     {

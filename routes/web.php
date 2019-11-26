@@ -29,11 +29,15 @@ Route::get('/','HomeController@congviec');
 Route::get('/','HomeController@duan');
 Route::get('/','HomeController@postbai');
 Route::get('/','HomeController@doan');
+//Route::get ('/','HomeController@home');
+//Route::get ('/','HomeController@login');
+//Route::get('/','HomeController@aa');
 
 Route::get('duan','HomeController@duan');
 Route::get('congviec','Homecontroller@congviec');
 Route::get('postbai','HomeController@postbai');
 Route::get('quanly','HomeController@quanly');
+
 
 //Route::get('doan','HomeController@duan');
 //Route::get('/','HomeController@quanly');
@@ -41,8 +45,8 @@ Route::get('quanly','HomeController@quanly');
 //Route::get('/', function () {
 //    return view('index');
 //});
-//Route::get('list',['uses' => 'DuAnController@getList']);
-//Route::post('add',['uses' => 'DuAnController@getAdd']);
-//Route::get('edit/{id}',['uses' => 'DuAnController@getEdit']);
-//Route::post('edit/{id}',['uses' => 'DuAnController@postEdit']);
-//Route::get('delete/{id}',['uses' => 'DuAnController@getDelete']);
+Route::get('list',['uses' => 'DuAnController@getList']);
+Route::post('add',['uses' => 'DuAnController@getAdd']);
+Route::get('edit/{id}',['uses' => 'DuAnController@getEdit']);
+Route::post('edit/{id}',['uses' => 'DuAnController@postEdit']);
+Route::get('delete/{id}',['uses' => 'DuAnController@getDelete']);

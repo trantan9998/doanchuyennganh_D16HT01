@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\DuAn;
 class DuAnController extends Controller
 {
     public function getList()
@@ -13,13 +13,13 @@ class DuAnController extends Controller
     public function getAdd (Request $request)
     {
         $duan = new DuAn;
-        $duan->tenduan       = $request->tenduan;
-        $duan->nhiemvu       = $request->nhiemvu;
-        $duan->nguoithuchien = $request->nguoithuchien;
-        $duan->ngaybatdau    = $request->ngaybatdau;
-        $duan->ngayketthuc   = $request->ngayketthuc;
+        $duan->tenduan  = $request->tenduan;
+        $duan->cacchucnang = $request->cacchucnang;
+        $duan->tencongviec = $request->tencongviec;
+        $duan->nhiemvu = $request->nhiemvu;
+        $duan->ngaybatdau = $request->ngaybatdau;
+        $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();
-
         return "Thêm thành công";
     }
     public function getEdit($id)
@@ -29,11 +29,12 @@ class DuAnController extends Controller
     public function postEdit(Request $request,$id)
     {
         $duan = DuAn::findOrFail($id);
-        $duan->tenduan       = $request->tenduan;
-        $duan->nhiemvu       = $request->nhiemvu;
-        $duan->nguoithuchien = $request->nguoithuchien;
-        $duan->ngaybatdau    = $request->ngaybatdau;
-        $duan->ngayketthuc   = $request->ngayketthuc;
+        $duan->tenduan= $request->tenduan;
+        $duan->cacchucnang = $request->cacchucnang;
+        $duan->tencongviec = $request->tencongviec;
+        $duan->nhiemvu = $request->nhiemvu;
+        $duan->ngaybatdau = $request->ngaybatdau;
+        $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();
         return "Sửa thành công";
     }
