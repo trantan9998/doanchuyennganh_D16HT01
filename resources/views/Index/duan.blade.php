@@ -85,9 +85,11 @@
 
         <nav class="navbar navbar-light bg-gray topbar mb static-shadow">
             <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u>
+                <span style="color: #1c294e">
                 @foreach($duan as $Duan)
-                    {{$Duan -> Tenduan}}
+                    {{$Duan -> tenduan}}
                 @endforeach
+                </span>
             </h2>
         </nav>
         <br>
@@ -95,30 +97,54 @@
             <!-- End of board info bar -->
             <!-- Lists container -->
             <section class="lists-container" >
+{{--                <div class="list" style="background-color:#6f42c1" >--}}
+{{--                    <h3 class="list-title" style="color: white">DỰ ÁN</h3>--}}
+{{--                        <ul class="list-items" style="font-size: 20px; color: lightblue">--}}
+{{--                        @foreach($duan as $Duan)--}}
+{{--                            {{$Duan -> tenduan}}--}}
+{{--                                <br>--}}
+{{--                        @endforeach--}}
+
+{{--                            <hr class="sidebar-divider my-3">--}}
+
+{{--                        </ul>--}}
+{{--                    <!-- <button class="add-card-btn btn">Add a card</button> -->--}}
+{{--                </div>--}}
                 <div class="list" style="background-color:#6f42c1" >
                     <h3 class="list-title" style="color: white">TỔNG SỐ THÀNH VIÊN DỰ ÁN</h3>
-                    <ul class="list-items">
-
+                    <ul class="list-items" style="font-size: 20px; margin-left: 80px; color: lightblue">
+                        @foreach($duan as $Duan)
+                            {{$Duan -> sothanhvien}} Thành Viên
+                            <br>
+                        @endforeach
                     </ul>
                     <!-- <button class="add-card-btn btn">Add a card</button> -->
                 </div>
                 <div class="list" style="background-color:goldenrod" >
                     <h3 class="list-title" style="color: white">CHI PHÍ CHO DỰ ÁN</h3>
-                    <ul class="list-items">
+                    <ul class="list-items" style="font-size: 20px; margin-left: 80px; color: lightblue">
+                        @foreach($duan as $Duan)
+                            {{$Duan -> chiphi}} VND
+                        @endforeach
                     </ul>
                     {{--                <button class="add-card-btn btn">Add a card</button>--}}
                 </div>
                 <div class="list" style="background-color: #1F77D0">
                     <h3 class="list-title" style="color: white">THỜI GIAN DỰ KIẾN BẮT ĐẦU</h3>
-                    <ul class="list-items">
+                    <ul class="list-items"style="font-size: 20px; margin-left: 80px; color: lightblue">
+                        @foreach($duan as $Duan)
+                            {{$Duan -> ngaybatdau}}
+                        @endforeach
                     </ul>
                 </div>
                 <div class="list" style="background-color: firebrick" >
 
                     <h3 class="list-title" style="color: white">THỜI GIAN DỰ KIẾN KẾT THÚC </h3>
 
-                    <ul class="list-items" >
-
+                    <ul class="list-items"style="font-size: 20px; margin-left: 80px; color: lightblue" >
+                        @foreach($duan as $Duan)
+                            {{$Duan -> ngayketthuc}}
+                        @endforeach
                     </ul>
                 </div>
 

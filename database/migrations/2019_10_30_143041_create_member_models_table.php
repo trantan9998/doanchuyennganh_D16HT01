@@ -15,10 +15,14 @@ class CreateMemberModelsTable extends Migration
     {
         Schema::create('member_models',
             function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table ->string ('nguoithuchien');
-                $table->string('Tiendo');
-                $table->string('mucdoHoanthanh');
+                $table->bigIncrements('id')->unique();
+                $table ->string ('tenthanhvien');
+                $table ->string ('vaitro');
+                $table->string('chucnang');
+                $table->string('tencongviec');
+                $table->string ('nhiemvu');
+                $table->string ('tiendo');
+                $table->string ('mucdohoanthanh');
                 $table->string ('noidung');
                 $table->string ('upload_hinhanh')->nullable();
                 $table->string ('upload_file')->nullable();

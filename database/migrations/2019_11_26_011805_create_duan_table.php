@@ -16,9 +16,8 @@ class CreateDuanTable extends Migration
         Schema::create('duan', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
             $table->string('tenduan');
-            $table->string('cacchucnang');
-            $table->string ("tencongviec");
-            $table->string('nhiemvu');
+            $table->string('chiphi');
+            $table->string ("sothanhvien");
             $table->string('ngaybatdau') ;
             $table->string('ngayketthuc');
             $table->timestamps();

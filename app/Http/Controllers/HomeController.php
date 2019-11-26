@@ -14,10 +14,23 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function quanly()
+    public function quanlyduan()
     {
        return (view('Admin.quanly'));
     }
+    public function quanlythanhvien()
+    {
+        return (view('Admin.quanlythanhvien'));
+    }
+
+    // QUẢN LÝ DỰ ÁN
+    public function duan(){
+        $duan=DuAn::all();
+        return View('index.duan',[
+            'duan'=>$duan,
+        ]);
+    }
+    // QUẢN LÝ CÔNG VIỆC
     public function congviec()
     {
         return View('index.congviec');
@@ -35,12 +48,7 @@ class HomeController extends Controller
                 'postbai'=>$postbai,
             ]);
       }
-      public function duan(){
-            $duan=Member_model::all();
-            return View('index.duan',[
-                'duan'=>$duan,
-            ]);
-      }
+
     public function doan(){
         return View('doan');
     }

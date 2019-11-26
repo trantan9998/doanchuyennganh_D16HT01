@@ -36,8 +36,8 @@ Route::get('/','HomeController@doan');
 Route::get('duan','HomeController@duan');
 Route::get('congviec','Homecontroller@congviec');
 Route::get('postbai','HomeController@postbai');
-Route::get('quanly','HomeController@quanly');
-Route::get('demo','HomeController@demo');
+Route::get('quanly','HomeController@quanlyduan');
+Route::get('qlthanhvien','HomeController@quanlythanhvien');
 
 
 //Route::get('doan','HomeController@duan');

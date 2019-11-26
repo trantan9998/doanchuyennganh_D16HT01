@@ -14,9 +14,8 @@ class DuAnController extends Controller
     {
         $duan = new DuAn;
         $duan->tenduan  = $request->tenduan;
-        $duan->cacchucnang = $request->cacchucnang;
-        $duan->tencongviec = $request->tencongviec;
-        $duan->nhiemvu = $request->nhiemvu;
+        $duan->chiphi = $request->chiphi;
+        $duan->sothanhvien = $request->sothanhvien;
         $duan->ngaybatdau = $request->ngaybatdau;
         $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();
@@ -29,10 +28,9 @@ class DuAnController extends Controller
     public function postEdit(Request $request,$id)
     {
         $duan = DuAn::findOrFail($id);
-        $duan->tenduan= $request->tenduan;
-        $duan->cacchucnang = $request->cacchucnang;
-        $duan->tencongviec = $request->tencongviec;
-        $duan->nhiemvu = $request->nhiemvu;
+        $duan->tenduan  = $request->tenduan;
+        $duan->chiphi = $request->chiphi;
+        $duan->sothanhvien = $request->sothanhvien;
         $duan->ngaybatdau = $request->ngaybatdau;
         $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();

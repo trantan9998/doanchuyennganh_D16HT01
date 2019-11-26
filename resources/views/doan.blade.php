@@ -22,7 +22,7 @@
         <a class="sidebar-brand d-flex align-items-center justify-content-center" >
             <div class="sidebar-brand-icon rotate-n-15">
             </div>
-            <div class="sidebar-brand-text mx-4">DAILY-WORK<sup>(^^)</sup></div>
+            <div class="sidebar-brand-text mx-3 ">TEAM-WORK<sup>**)</sup></div>
         </a>
         <!-- Divider -->
         <br>
@@ -69,11 +69,13 @@
         <nav class="navbar navbar-light bg-gray-400 topbar mb-4 static-shadow">
             <marquee><span style="color: #1c294e;font-size: 20px"> CHÚC CÁC THÀNH VIÊN TRONG NHÓM HOÀN THÀNH TỐT CÔNG VIỆC</span></marquee>
         </nav>
-        <nav class="navbar navbar-light bg-gray topbar mb static-shadow">
-            <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u>
-            </h2>
+        <nav >
+            <center>
+            <h2 style="opacity: 0.8;">   KHOA HỌC TRONG CÁCH LÀM VIỆC
+            </h2></center>
         </nav>
-        <img src="img/powerpoint-chen-anh.jpg" style="width:1000px;height: 450px;margin-left: 40px;">
+        <hr>
+        <img src="img/powerpoint-chen-anh.jpg" style="width:1173px;height:513px;margin-left: 40px;">
         <br>
     </div>
     <!-- Bootstrap core JavaScript-->

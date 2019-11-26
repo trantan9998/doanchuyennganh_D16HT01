@@ -39,7 +39,7 @@
     <hr>
     <!-- Nav Item - Dashboard -->
     <li>
-        <a href="" class=" btn-primary btn-icon-split">
+        <a href="quanly" class=" btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
@@ -48,7 +48,7 @@
     </li>
     <hr>
     <li>
-        <a href="" class=" btn-primary btn-icon-split">
+        <a href="qlthanhvien" class=" btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
@@ -106,9 +106,8 @@
                                             <tr style="font-size: 13px">
                                                 <th>MÃ DỰ ÁN</th>
                                                 <th>TÊN DỰ ÁN</th>
-                                                <th>THÀNH PHẦN CHỨC NĂNG</th>
-                                                <th>CÔNG VIỆC THỰC HIỆN</th>
-                                                <th>NHIỆM VỤ</th>
+                                                <th>CHI PHÍ DỰ ÁN</th>
+                                                <th>SỐ THÀNH VIÊN THỰC HIỆN</th>
                                                 <th>NGÀY BẮT ĐẦU</th>
                                                 <th>NGÀY KẾT THÚC</th>
                                             </tr>
@@ -117,9 +116,8 @@
                                             <tr ng-repeat="da in duans">
                                                 <td>{{ da.id }}</td>
                                                 <td>{{ da.tenduan }}</td>
-                                                <td>{{ da.cacchucnang }}</td>
-                                                <td>{{ da.tencongviec }}</td>
-                                                <td>{{ da.nhiemvu }}</td>
+                                                <td>{{ da.chiphi }}</td>
+                                                <td>{{ da.sothanhvien }}</td>
                                                 <td>{{ da.ngaybatdau }}</td>
                                                 <td>{{ da.ngayketthuc }}</td>
                                                 <td>
@@ -148,25 +146,17 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">các chức năng</label>
+                                                                <label for="inputEmail3" class="col-sm-3 control-label">Chi Phí Dự Án</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="text" class="form-control" id="cacchucnang" name="cacchucnang" placeholder="Vui lòng nhập nhiệm vụ" ng-model="cacchucnang"  ng-required="true" />
-                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.cacchucnang.$error.required">Vui lòng nhập Chức năng</span>
+                                                                    <input type="text" class="form-control" id="chiphi" name="chiphi" placeholder="Vui lòng nhập nhiệm vụ" ng-model="chiphi"  ng-required="true" />
+                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.chiphi.$error.required">Vui lòng nhập Chức năng</span>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">Tên công việc</label>
+                                                                <label for="inputEmail3" class="col-sm-4 control-label">Số Thành Viên</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="text" class="form-control" id="tencongviec" name="tencongviec" placeholder="Vui lòng nhập người thực hiện" ng-model="tencongviec" ng-required="true" >
-                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.tencongviec.$error.required">Vui lòng nhập Tên công việc</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">Nhiệm Vụ</label>
-                                                                <div class="col-sm-9">
-                                                                    <input type="text" class="form-control" id="nhiemvu" name="nhiemvu" placeholder="Vui lòng nhập ngày bắt đầu" ng-model="nhiemvu" ng-required="true" />
-                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.nhiemvu.$error.required">Vui lòng nhập Nhiệm vụ</span>
-
+                                                                    <input type="text" class="form-control" id="sothanhvien" name="sothanhvien" placeholder="Vui lòng nhập người thực hiện" ng-model="sothanhvien" ng-required="true" >
+                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.sothanhvien.$error.required">Vui lòng nhập Tên công việc</span>
                                                                 </div>
                                                             </div>
 

@@ -10,9 +10,8 @@ app.controller('DuAnController',function($scope,$http,$filter){
 			case "add":
 				$scope.frmTitle = "THÊM MỚI DỰ ÁN";
 				$scope.tenduan = null;
-				$scope.cacchucnang = null;
-				$scope.tencongviec = null;
-				$scope.nhiemvu = null;
+				$scope.chiphi = null;
+				$scope.sothanhvien = null;
 				$scope.ngaybatdau = null;
 				$scope.ngayketthuc = null;
 				break;
@@ -22,9 +21,8 @@ app.controller('DuAnController',function($scope,$http,$filter){
 				$http.get('http://127.0.0.1:8000/' +'edit/'+ id)
 				.then(function mySuccess (response){
 					$scope.tenduan = response.data.tenduan;
-					$scope.cacchucnang = response.data.cacchucnang;
-					$scope.tencongviec = response.data.tencongviec;
-					$scope.nhiemvu = response.data.nhiemvu;
+					$scope.chiphi = response.data.chiphi;
+					$scope.sothanhvien = response.data.sothanhvien;
 					$scope.ngaybatdau =  new Date(response.data.ngaybatdau);
 					$scope.ngayketthuc = new Date(response.data.ngayketthuc);
 				});
@@ -42,7 +40,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 			var url = 'http://127.0.0.1:8000/add';
 			var dateStart = $filter('date')(new Date($scope.ngaybatdau), 'MM/dd/yyyy');
 			var dateEnd = $filter('date')(new Date($scope.ngayketthuc), 'MM/dd/yyyy');
-			var data = $.param({tenduan:$scope.tenduan, cacchucnang:$scope.cacchucnang, tencongviec:$scope.tencongviec, nhiemvu:$scope.nhiemvu, ngaybatdau: dateStart, ngayketthuc: dateEnd});
+			var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, ngaybatdau: dateStart, ngayketthuc: dateEnd});
 			$http({
 				method : 'POST',
 				url: url,
@@ -58,7 +56,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 			var url = 'http://127.0.0.1:8000/'+'edit/'+ id;
 			var dateStart = $filter('date')(new Date($scope.ngaybatdau), 'MM/dd/yyyy');
 			var dateEnd = $filter('date')(new Date($scope.ngayketthuc), 'MM/dd/yyyy');
-            var data = $.param({tenduan:$scope.tenduan, cacchucnang:$scope.cacchucnang, tencongviec:$scope.tencongviec, nhiemvu:$scope.nhiemvu, ngaybatdau: dateStart, ngayketthuc: dateEnd});
+            var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, ngaybatdau: dateStart, ngayketthuc: dateEnd});
 			$http({
 				method : 'POST',
 				url: url,
