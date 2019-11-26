@@ -53,8 +53,8 @@ class HomeController extends Controller
     public function register(){
         return View('taikhoan.signup');
     }
-    public function aa(){
-        return View('index.index');
+    public function demo(){
+        return View('Admin.demo');
     }
     /**
      * Show the form for creating a new resource.

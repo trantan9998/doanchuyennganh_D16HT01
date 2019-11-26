@@ -8,7 +8,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 		$scope.state = state;
 		switch (state){
 			case "add":
-				$scope.frmTitle = "Thêm Sinh Viên";
+				$scope.frmTitle = "THÊM MỚI DỰ ÁN";
 				$scope.tenduan = null;
 				$scope.cacchucnang = null;
 				$scope.tencongviec = null;
@@ -17,7 +17,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 				$scope.ngayketthuc = null;
 				break;
 			case "edit":
-				$scope.frmTitle = "Sửa Sinh Viên";
+				$scope.frmTitle = "CẬP NHẬP LẠI DỰ ÁN";
 				$scope.id = id;
 				$http.get('http://127.0.0.1:8000/' +'edit/'+ id)
 				.then(function mySuccess (response){
@@ -35,7 +35,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 		}
 
 
-	}
+	};
 	$scope.save = function(state,id)
 	{
 		if (state == "add") {
@@ -70,11 +70,11 @@ app.controller('DuAnController',function($scope,$http,$filter){
 				location.reload();
 			});
 		}
-	}
+	};
 	$scope.cfDelete = function(id)
 	{
 		var iscfDelete = confirm('Bạn có muốn xoá không');
-		if (iscfDelete = true) {
+		if (iscfDelete ) {
 			$http.get('http://127.0.0.1:8000/' +'delete/'+ id)
 			.then(function(response){
 				console.log(response);
