@@ -39,36 +39,30 @@
     <hr>
     <!-- Nav Item - Dashboard -->
     <li>
-        <a href="quanly" class=" btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-            <span class="text" >---QUẢN LÝ DỰ ÁN--</span>
+        <a href="quanly">
+            <i>
+                <span class="text" >QUẢN LÝ DỰ ÁN</span>
+            </i>
         </a>
     </li>
     <hr>
     <li>
-        <a href="qlthanhvien" class=" btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-            <span class="text" >---QL THÀNH VIÊN--</span>
+        <a href="">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-flag" >
+                    QUẢN LÝ THÀNH VIÊN
+                </i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="qlthanhvien">THÀNH VIÊN</a>
+                <a class="dropdown-item" href="baocaoduan">BÁO CÁO DỰ ÁN</a>
+
+            </div>
         </a>
     </li>
 
     <hr>
-    <div class="text-lg-right " style="margin-top:40px">
-            <span id="sidebarToggle"> <span class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                    <span class="text" style="background-color: #a3b6ee">↔</span>
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                </span>
-            </span>
-    </div>
+
 
     <!-- Sidebar Toggler (Sidebar) -->
     <hr class="sidebar-divider my-3">
@@ -85,7 +79,7 @@
 <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                 <div class="info-box hover-expand-effect">
                     <div class="icon">
-                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-success" ng-click="modal('add')">+ THÊM MỚI DỰ ÁN</button>
+                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')">+ THÊM MỚI DỰ ÁN</button>
                     </div>
 
                 </div>

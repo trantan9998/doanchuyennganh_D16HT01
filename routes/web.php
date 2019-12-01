@@ -23,12 +23,14 @@
 
 //Route::get('/','HomeController@index');
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@congviec');
 Route::get('/','HomeController@duan');
 Route::get('/','HomeController@postbai');
 Route::get('/','HomeController@doan');
+//Route::get('/','HomeController@home');
 //Route::get ('/','HomeController@home');
 //Route::get ('/','HomeController@login');
 //Route::get('/','HomeController@aa');
@@ -38,16 +40,27 @@ Route::get('congviec','Homecontroller@congviec');
 Route::get('postbai','HomeController@postbai');
 Route::get('quanly','HomeController@quanlyduan');
 Route::get('qlthanhvien','HomeController@quanlythanhvien');
+Route::get('baocaoduan','HomeController@baocaoduan');
+//Route::get('/','HomeController@dangky');
 
-
+//Route::post('/','HomeController@home');
+//Route::get('/login','HomeController@login');
+//Route::get('/register','HomeController@register');
+//Route::get('/logout','HomeController@logout');
 //Route::get('doan','HomeController@duan');
 //Route::get('/','HomeController@quanly');
 
-//Route::get('/', function () {
-//    return view('index');
-//});
+// QUẢN LÝ VỀ DỰ ÁN CỦA THÀNH VIÊN
 Route::get('list',['uses' => 'DuAnController@getList']);
 Route::post('add',['uses' => 'DuAnController@getAdd']);
 Route::get('edit/{id}',['uses' => 'DuAnController@getEdit']);
 Route::post('edit/{id}',['uses' => 'DuAnController@postEdit']);
 Route::get('delete/{id}',['uses' => 'DuAnController@getDelete']);
+
+
+//QUẢN LÝ THÀNH VIÊN
+Route::get('list',['uses' => 'registerController@getListregister']);
+Route::post('add',['uses' => 'registerController@getAddregister']);
+Route::get('edit/{id}',['uses' => 'registerController@getEditregister']);
+Route::post('edit/{id}',['uses' => 'registerController@postEditregister']);
+Route::get('delete/{id}',['uses' => 'registerController@getDeleteregister']);

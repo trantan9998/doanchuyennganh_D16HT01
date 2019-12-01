@@ -39,35 +39,29 @@
         <hr>
         <!-- Nav Item - Dashboard -->
         <li>
-            <a href="quanly" class=" btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                <span class="text" >---QUẢN LÝ DỰ ÁN--</span>
+            <a href="quanly">
+                <i>
+                    <span class="text" >QUẢN LÝ DỰ ÁN</span>
+                </i>
             </a>
         </li>
         <hr>
         <li>
-            <a href="qlthanhvien" class=" btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                <span class="text" >---QL THÀNH VIÊN--</span>
+            <a href="">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-flag" >
+                        QUẢN LÝ THÀNH VIÊN
+                    </i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="qlthanhvien">THÀNH VIÊN</a>
+                    <a class="dropdown-item" href="">BÁO CÁO DỰ ÁN</a>
+
+                </div>
             </a>
         </li>
         <hr>
-        <div class="text-lg-right " style="margin-top:40px">
-            <span id="sidebarToggle"> <span class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                    <span class="text" style="background-color: #a3b6ee">↔</span>
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                </span>
-            </span>
-        </div>
+
 
         <!-- Sidebar Toggler (Sidebar) -->
         <hr class="sidebar-divider my-3">
@@ -75,9 +69,39 @@
 
     <div style="width: 100%;background-color: #a5cae0" class="content" >
         <nav style="background-color: #dddfeb">
-            <h4>---QUẢN LÝ THÀNH VIÊN---</h4>
+            <h4>TIẾN ĐỘ DỰ ÁN CỦA CÁC THÀNH VIÊN</h4>
         </nav>
         <br>
+
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <caption class="bg-gradient-light">Danh sách thành viên đã đăng ký</caption>
+                    <thead>
+                    <tr>
+                        <th>MÃ SỐ</th>
+                        <th>HỌ VÀ TÊN</th>
+                        <th>SỐ ĐIỆN THOẠI</th>
+                        <th>HOÀN THÀNH</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>teo123</td>
+                        <td>Huynh Van Teo</td>
+                        <td>huynhvanteo@gmail.com</td>
+                        <td>Thành viên</td>
+                        <td><a href="chinh-sua-thanh-vien.php?id=1">Sửa</a> <a href="xoa-thanh-vien.php?id=1">Xóa</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div><!-- /.container -->
+
     </div>
 
 

@@ -10,7 +10,8 @@ session_start();
 <head>
     <title>AngularJS Register Login Script using PHP Mysql</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/ilbs/angularjs/1.5.7/angular.min.js"></script>
+<!--    <script src="angularjs/angular.js"></script>-->
     <style>
         .form_style
         {
@@ -30,7 +31,7 @@ session_start();
     {
     ?>
     <div class="alert {{alertClass}} alert-dismissible" ng-show="alertMsg">
-        <a href="#" class="close" ng-click="closeMsg()" aria-label="close">&times;</a>
+        <a href="login" class="close" ng-click="closeMsg()" aria-label="close">&times;</a>
         {{alertMessage}}
     </div>
 

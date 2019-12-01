@@ -30,6 +30,12 @@ class HomeController extends Controller
             'duan'=>$duan,
         ]);
     }
+
+    public function baocaoduan()
+    {
+        return (view('Admin.baocaoduan'));
+    }
+
     // QUẢN LÝ CÔNG VIỆC
     public function congviec()
     {
@@ -52,17 +58,25 @@ class HomeController extends Controller
     public function doan(){
         return View('doan');
     }
+
+    //TÀI KHOẢN THÀNH VIÊN
     public function home(){
-        return View('taikhoan.Home');
+        return View('Taikhoan.Home');
     }
+    //đăng nhập
     public function login(){
-        return View('taikhoan.login');
+        return View('Taikhoan.login');
     }
+    //đăng ký
     public function register(){
-        return View('taikhoan.signup');
+        return View('Taikhoan.register');
     }
-    public function demo(){
-        return View('Admin.demo');
+    //đăng xuất
+    public function logout(){
+        return View('Taikhoan.logout');
+    }
+    public function dangky(){
+        return View('Taikhoan.dangky');
     }
     /**
      * Show the form for creating a new resource.

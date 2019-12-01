@@ -32,7 +32,8 @@ if(empty($form_data->password))
 
 if(empty($error))
 {
-    $query = "SELECT * FROM register WHERE email = :email";
+    $query = "SELECT * FROM registers WHERE email = :email";
+
     $statement = $connect->prepare($query);
     if($statement->execute($data))
     {
@@ -59,7 +60,7 @@ if(empty($error))
 }
 else
 {
-    $validation_error = implode(", ", $error);
+    $validation_error = implode(",", $error);
 }
 
 $output = array(
