@@ -31,7 +31,7 @@
 
         <hr class="sidebar-divider my-3">
         <li>
-            <a href="duan" class="btn btn-primary btn-icon-split">
+            <a href="dangnhap" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white">
                       <i class="fas fa-flag"></i>
                     </span>

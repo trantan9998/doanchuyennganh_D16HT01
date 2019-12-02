@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Member_model;
+use App\register;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\DuAn;
@@ -30,7 +31,6 @@ class HomeController extends Controller
             'duan'=>$duan,
         ]);
     }
-
     public function baocaoduan()
     {
         return (view('Admin.baocaoduan'));
@@ -39,7 +39,10 @@ class HomeController extends Controller
     // QUẢN LÝ CÔNG VIỆC
     public function congviec()
     {
-        return View('index.congviec');
+        $congviec = Member_model::all();
+        return View('index.congviec',[
+            'congviec'=>$congviec,
+        ]);
 
 //        $user = Member_model::find($id);
 //        $tenduan = DB::table('member_models')->join('du_ans','du_ans.id_member','=','member_models.id')->where('member_models.id','=',$id)->get();
@@ -48,13 +51,21 @@ class HomeController extends Controller
 //        ]);
 
     }
+    // ĐĂNG NHẬP THÀNH VIÊN
+    public function dangnhap(){
+        $dangnhap = register::all();
+        return View('index.dangnhap',[
+            'dangnhap'=>$dangnhap,
+        ]);
+    }
+
       public function postbai(){
             $postbai= Member_model::all();
             return view('index.postbai',[
                 'postbai'=>$postbai,
             ]);
       }
-
+    // TRANG CHỦ : admin và member
     public function doan(){
         return View('doan');
     }

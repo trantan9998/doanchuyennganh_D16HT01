@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\register;
 use Illuminate\Http\Request;
 
-class registeController extends Controller
+class registerController extends Controller
 {
     public function getListregister()
     {
-        return registers::orderBy('id','ASC')->get();
+        return register::orderBy('id','ASC')->get();
     }
     public function getAddregister (Request $request)
     {
-        $Register = new registers;
+        $Register = new register;
         $Register->hovaten  = $request->hovaten;
         $Register->diachi = $request->diachi;
         $Register->sdt = $request->sdt;
@@ -24,7 +24,7 @@ class registeController extends Controller
     }
     public function getEditregister($id)
     {
-        return registers::findOrFail($id);
+        return register::findOrFail($id);
     }
     public function postEditregister(Request $request,$id)
     {
@@ -37,10 +37,12 @@ class registeController extends Controller
         $Register->save();
         return "Sửa thành công";
     }
-    public function getDelete($id)
+    public function getDeleteregister($id)
     {
-        $Register = registers::findOrFail($id);
+        $Register = register::findOrFail($id);
         $Register->delete();
         return "Xoá Thành Công";
     }
+
+
 }

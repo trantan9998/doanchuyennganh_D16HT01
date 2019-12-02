@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myregister" ng-controller="registerController">
+<html lang="en" ng-app="my-app" ng-controller="registerController">
 <head>
     <meta charset="UTF-8" />
-
     <title>ADMIN</title>
     <!-- Load Bootstrap CSS -->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Google Fonts -->
@@ -155,17 +153,17 @@
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-3 control-label">TÊN ĐĂNG NHẬP</label>
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">TÊN ĐĂNG NHẬP</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="tendangnhap" name="tendangnhap" placeholder="Vui lòng nhập ngày kết thúc" ng-model="tendangnhap" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.tendangnhap.$error.required">Vui lòng nhập tên đăng nhập</span>
+                                                                        <input type="text" class="form-control" id="tendangnhap" name="tentaikhoan" placeholder="Vui lòng nhập ngày kết thúc" ng-model="tentaikhoan" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.tentaikhoan.$error.required">Vui lòng nhập tên đăng nhập</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputEmail3" class="col-sm-4 control-label">MẬT KHẨU</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="matkhau" name="matkhau" placeholder="Vui lòng nhập ngày kết thúc" ng-model="matkhau" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.matkhau.$error.required">Vui lòng nhập mật khẩu/span>
+                                                                        <input type="password" class="form-control" id="matkhau" name="matkhau" placeholder="Vui lòng nhập ngày kết thúc" ng-model="matkhau" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.matkhau.$error.required">Vui lòng nhập mật khẩu</span>
                                                                     </div>
                                                                 </div>
                                                             </form>

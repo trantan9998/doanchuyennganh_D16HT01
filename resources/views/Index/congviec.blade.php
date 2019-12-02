@@ -84,11 +84,11 @@
             </marquee>
         </nav>
         <nav class="navbar navbar-light bg-gray topbar mb static-shadow">
-            <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u>
+            <h2 style="opacity: 0.8; "><u>DỰ ÁN:</u> Xây dựng website bán hàng
 {{--                @foreach($user as $User)--}}
-{{--                    {{$User -> tenduan}}--}}
-{{--                @endforeach--}}
-                <a name="" id="" class="btn btn-primary " href="" role="button" style="margin-left: 600px">Hoàn thành</a>
+                {{--                    {{$User -> tenduan}}--}}
+                {{--                @endforeach--}}
+                <a name="" id="" class="btn btn-primary " href="" role="button" style="margin-left: 40em">Hoàn thành</a>
                 <a name="" id="" class="btn btn-primary " href="" role="button" >Chưa hoàn thành</a>
             </h2>
         </nav>
@@ -101,18 +101,18 @@
                 <div class="list" >
                     <h3 class="list-title">TÊN CÔNG VIỆC:</h3>
                     <ul class="list-items">
-{{--                        @foreach($congviec as $Congviec)--}}
-{{--                            <li>{{$Congviec->Tencongviec}}</li>--}}
-{{--                        @endforeach--}}
+                        @foreach($congviec as $Congviec)
+                            <li>{{$Congviec->chucnang}}</li>
+                        @endforeach
                     </ul>
                     <!-- <button class="add-card-btn btn">Add a card</button> -->
                 </div>
                 <div class="list" >
                     <h3 class="list-title">CÔNG VIỆC CẦN LÀM</h3>
                     <ul class="list-items">
-{{--                        @foreach($congviec as $Congviec)--}}
-{{--                            <li>{{$Congviec->Tenchucnang}}</li>--}}
-{{--                        @endforeach--}}
+                        @foreach($congviec as $Congviec)
+                            <li>{{$Congviec->tencongviec}}</li>
+                        @endforeach
                     </ul>
                     {{--                <button class="add-card-btn btn">Add a card</button>--}}
                 </div>
@@ -120,8 +120,10 @@
                     <h3 class="list-title" style="color: white">THỜI GIAN BẮT ĐẦU</h3>
                     <ul class="list-items">
 {{--                        @foreach($congviec as $Congviec)--}}
-{{--                            <li>{{$Congviec->Ngaybatdau}}</li>--}}
+{{--                            <li>{{$Congviec->ngaybatdau}}</li>--}}
 {{--                        @endforeach--}}
+                            <li>12/02/2019</li>
+
                     </ul>
                 </div>
                 <div class="list" style="background-color: firebrick" >
@@ -130,8 +132,9 @@
 
                     <ul class="list-items" >
 {{--                        @foreach($congviec as $Congviec)--}}
-{{--                            <li>{{$Congviec->Ngayketthuc}}</li>--}}
+{{--                            <li>{{$Congviec->ngaybatdau}}</li>--}}
 {{--                        @endforeach--}}
+                        <li>01/03/2020</li>
                     </ul>
                 </div>
                 <!-- <div ng-ap="myapp" ng-controller="member">

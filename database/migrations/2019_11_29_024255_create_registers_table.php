@@ -14,7 +14,7 @@ class CreateRegistersTable extends Migration
     public function up()
     {
         Schema::create('registers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unique();
             $table->string ('hovaten')->nullable();
             $table->string ('diachi')->nullable();
             $table->string ('sdt')->nullable();

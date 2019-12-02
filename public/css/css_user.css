@@ -1,7 +1,7 @@
 /*
 
-All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 320). 
-            
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 320).
+
 The 'supports' rule will only run if your browser supports CSS grid.
 
 Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
@@ -318,7 +318,7 @@ body {
 
 The following rule will only run if your browser supports CSS grid.
 
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
 
 */
 
@@ -390,10 +390,11 @@ table {
     text-align: left;
     padding: 8px;
   }
-  
+
   tr:nth-child(even){background-color: #f2f2f2}
-  
+
   th {
     background-color: #4CAF50;
     color: white;
   }
+

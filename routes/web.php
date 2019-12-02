@@ -41,6 +41,7 @@ Route::get('postbai','HomeController@postbai');
 Route::get('quanly','HomeController@quanlyduan');
 Route::get('qlthanhvien','HomeController@quanlythanhvien');
 Route::get('baocaoduan','HomeController@baocaoduan');
+Route::get('dangnhap','HomeController@dangnhap');
 //Route::get('/','HomeController@dangky');
 
 //Route::post('/','HomeController@home');
@@ -59,8 +60,11 @@ Route::get('delete/{id}',['uses' => 'DuAnController@getDelete']);
 
 
 //QUẢN LÝ THÀNH VIÊN
-Route::get('list',['uses' => 'registerController@getListregister']);
-Route::post('add',['uses' => 'registerController@getAddregister']);
-Route::get('edit/{id}',['uses' => 'registerController@getEditregister']);
-Route::post('edit/{id}',['uses' => 'registerController@postEditregister']);
-Route::get('delete/{id}',['uses' => 'registerController@getDeleteregister']);
+Route::get('listregister',['uses' => 'registerController@getListregister']);
+Route::post('addregister',['uses' => 'registerController@getAddregister']);
+Route::get('editregister/{id}',['uses' => 'registerController@getEditregister']);
+Route::post('editregister/{id}',['uses' => 'registerController@postEditregister']);
+Route::get('deleteregister/{id}',['uses' => 'registerController@getDeleteregister']);
+Route::get('reader/{id}',['users'=>'HomeController@dangnhap']);
+
+//đăng nhập thành viên
