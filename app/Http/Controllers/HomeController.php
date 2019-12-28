@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Member_model;
-use App\register;
+
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Auth;
 use App\DuAn;
+
+use App\User;
+use Symfony\Component\Console\Input\Input;
 
 class HomeController extends Controller
 {
@@ -17,11 +21,24 @@ class HomeController extends Controller
      */
     public function quanlyduan()
     {
-       return (view('Admin.quanly'));
+       return view('quanly.quanly');
     }
+    public function thongtinduan()
+    {
+        $thongtinduan=DuAn::all();
+        return View('Admin.thongtinduan',[
+            'thongtinduan'=>$thongtinduan,
+        ]);
+    }
+
+
     public function quanlythanhvien()
     {
-        return (view('Admin.quanlythanhvien'));
+        $duan=DuAn::all();
+        return View('Admin.quanlythanhvien',[
+            'duan'=>$duan,
+        ]);
+
     }
 
     // QUẢN LÝ DỰ ÁN
@@ -31,10 +48,19 @@ class HomeController extends Controller
             'duan'=>$duan,
         ]);
     }
+
+    //Xử lý công việc cho từng thành viên
     public function baocaoduan()
     {
-        return (view('Admin.baocaoduan'));
+        $member=Member_model::all();
+        return view('Admin.baocaoduan',[
+            'member'=>$member,
+        ]);
+    } public function thongkebaocao()
+    {
+        return view('Admin.thongkebaocao');
     }
+
 
     // QUẢN LÝ CÔNG VIỆC
     public function congviec()
@@ -52,12 +78,42 @@ class HomeController extends Controller
 
     }
     // ĐĂNG NHẬP THÀNH VIÊN
-    public function dangnhap(){
-        $dangnhap = register::all();
-        return View('index.dangnhap',[
-            'dangnhap'=>$dangnhap,
-        ]);
+//    public function dangnhap(){
+//        $dangnhap = register::all();
+//        return View('quanlythanhvien.index',[
+//            'dangnhap'=>$dangnhap,
+//        ]);
+//    }
+    public function  getdangnhap(){
+        return view('index.dangnhap');
     }
+    public function  postdangnhap(Request $request){
+        $this->validate($request,[
+            'email'=>'required',
+            'matkhau'=>'required'
+            ],[
+                'email.required'=>'Bạn chưa nhập địa chỉ email',
+                'matkhau.required'=>'Bạn chưa nhập mật khẩu',
+            ]);
+        if(Auth::attempt(['email'=>$request->email,'matkhau'=>$request->matkhau])){
+            return redirect('congviec');
+        }
+        else
+        {
+            return redirect('dangnhap')->with('thongbao','đăng nhập không thành công');
+        }
+
+    }
+
+
+//    public function webcomee(){
+//
+//        return View('quanlythanhvien.webcomee');
+//    }
+//
+//    public function  logins(Request $login){
+//        return View('quanlythanhvien.login');
+//    }
 
       public function postbai(){
             $postbai= Member_model::all();

@@ -1,8 +1,8 @@
-var register = angular.module('my-app',[]);
-register.controller('registerController',function($scope,$http,$filter){
+var user = angular.module('my-app',[]);
+user.controller('registerController',function($scope,$http,$filter){
     $http.get("http://127.0.0.1:8000/listregister")
         .then(function mySuccess (response){
-            $scope.registers = response.data ;
+            $scope.users = response.data ;
         });
     $scope.modal = function(state,id) {
         $scope.state = state;
@@ -12,7 +12,7 @@ register.controller('registerController',function($scope,$http,$filter){
                 $scope.hovaten = null;
                 $scope.diachi = null;
                 $scope.sdt = null;
-                $scope.tentaikhoan=null;
+                $scope.email=null;
                 $scope.matkhau=null;
                 break;
             case "edit":
@@ -20,11 +20,11 @@ register.controller('registerController',function($scope,$http,$filter){
                 $scope.id = id;
                 $http.get('http://127.0.0.1:8000/' +'editregister/'+ id)
                     .then(function mySuccess (response){
-                        $scope.hovaten = null;
-                        $scope.diachi = null;
-                        $scope.sdt = null;
-                        $scope.tentaikhoan = null;
-                        $scope.matkhau = null;
+                        $scope.hovaten = response.data.hovaten;
+                        $scope.diachi = response.data.diachi;
+                        $scope.sdt = response.data.sdt;
+                        $scope.email = response.data.email;
+                        $scope.matkhau = response.data.matkhau;
                     });
                 break;
             default : $scope.frmTitle = "...";
@@ -37,7 +37,7 @@ register.controller('registerController',function($scope,$http,$filter){
     {
         if (state == "add") {
             var url = 'http://127.0.0.1:8000/addregister';
-            var data = $.param({hovaten:$scope.hovaten, diachi:$scope.diachi, sdt:$scope.sdt,tentaikhoan:$scope.tentaikhoan,matkhau:$scope.matkhau});
+            var data = $.param({hovaten:$scope.hovaten, diachi:$scope.diachi, sdt:$scope.sdt,email:$scope.email,matkhau:$scope.matkhau});
             $http({
                 method : 'POST',
                 url: url,
@@ -51,7 +51,7 @@ register.controller('registerController',function($scope,$http,$filter){
         }
         if (state == "edit") {
             var url = 'http://127.0.0.1:8000/'+'editregister/'+ id;
-            var data = $.param({hovaten:$scope.hovaten, diachi:$scope.diachi, sdt:$scope.sdt,tentaikhoan:$scope.tentaikhoan,matkhau:$scope.matkhau});
+            var data = $.param({hovaten:$scope.hovaten, diachi:$scope.diachi, sdt:$scope.sdt,email:$scope.email, matkhau:$scope.matkhau});
             $http({
                 method : 'POST',
                 url: url,

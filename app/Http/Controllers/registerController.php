@@ -3,44 +3,45 @@
 namespace App\Http\Controllers;
 
 use App\register;
+use App\User;
 use Illuminate\Http\Request;
 
 class registerController extends Controller
 {
     public function getListregister()
     {
-        return register::orderBy('id','ASC')->get();
+        return User::orderBy('id','ASC')->get();
     }
     public function getAddregister (Request $request)
     {
-        $Register = new register;
-        $Register->hovaten  = $request->hovaten;
-        $Register->diachi = $request->diachi;
-        $Register->sdt = $request->sdt;
-        $Register->tentaikhoan = $request->tentaikhoan;
-        $Register->matkhau = $request->matkhau;
-        $Register->save();
+        $User = new user;
+        $User->hovaten  = $request->hovaten;
+        $User->diachi = $request->diachi;
+        $User->sdt = $request->sdt;
+        $User->email = $request->email;
+        $User->matkhau = $request->matkhau;
+        $User->save();
         return "Thêm thành công";
     }
     public function getEditregister($id)
     {
-        return register::findOrFail($id);
+        return User::findOrFail($id);
     }
     public function postEditregister(Request $request,$id)
     {
-        $Register = register::findOrFail($id);
-        $Register->hovaten  = $request->hovaten;
-        $Register->diachi = $request->diachi;
-        $Register->sdt = $request->sdt;
-        $Register->tentaikhoan = $request->tentaikhoan;
-        $Register->matkhau = $request->matkhau;
-        $Register->save();
+        $User = user::findOrFail($id);
+        $User->hovaten  = $request->hovaten;
+        $User->diachi = $request->diachi;
+        $User->sdt = $request->sdt;
+        $User->email = $request->email;
+        $User->matkhau = $request->matkhau;
+        $User->save();
         return "Sửa thành công";
     }
     public function getDeleteregister($id)
     {
-        $Register = register::findOrFail($id);
-        $Register->delete();
+        $User = user::findOrFail($id);
+        $User->delete();
         return "Xoá Thành Công";
     }
 

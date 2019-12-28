@@ -9,54 +9,56 @@
     <title>DAILY WORK</title>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/trello.css" rel="stylesheet">
-
 </head>
-
 <body>
 <!-- Page Wrapper -->
 <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" >
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
             </div>
-            <div class="sidebar-brand-text mx-3 ">TEAM-WORK<sup>**)</sup></div>
+            <div class="sidebar-brand-text mx-3">DAILY-WORK<sup>(^^)</sup></div>
         </a>
         <!-- Divider -->
-        <br>
-
-        <!-- Nav Item - Dashboard -->
-
         <hr class="sidebar-divider my-3">
         <li>
-            <a href="dangnhap" class="btn btn-primary btn-icon-split">
+            <img src="img/login.png" width="100px" ;height="100px">
+        </li>
+        <br>
+        <li>
+            User:  <span style="color: white"> van tan</span>
+        </li>
+        <hr>
+        <!-- Nav Item - Dashboard -->
+        <li>
+            <a href="duan" class="btn btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+                <span class="text" style="background-color: #1c294e">DỰ ÁN</span>
+            </a>
+        </li>
+        <hr class="sidebar-divider my-3">
+        <li>
+            <a href="congviec" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white">
                       <i class="fas fa-flag"></i>
                     </span>
-                <span class="text" style="background-color: #1c294e;">THÀNH VIÊN</span>
+                <span class="text" style="background-color: #1c294e;">CÔNG VIỆC</span>
             </a>
         </li>
         <hr class="sidebar-divider my-3">
         <li>
-            <a href="thongtinduan" class="btn btn-primary btn-icon-split">
+            <a href="postbai" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
-                <span class="text" style="background-color: #1c294e">TRƯỞNG NHÓM</span>
+                <span class="text" style="background-color: #1c294e">BÁO CÁO</span>
             </a>
         </li>
-        <hr class="sidebar-divider my-3">
-
-        <li>
-            <a href="quanly" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                <span class="text" style="background-color: #1c294e">QUẢN LÝ DỰ ÁN</span>
-            </a>
-        </li>
+        <!-- Sidebar Toggler (Sidebar) -->
         <hr class="sidebar-divider my-3">
 
         <div class="text-lg-right " style="margin-top:40px">
@@ -71,22 +73,10 @@
                 </span>
             </span>
         </div>
-
     </ul>
-
-    <div style="width: 100%;">
+    <div style="width: 100%">
         <!-- Topbar -->
-        <nav class="navbar navbar-light bg-gray-400 topbar mb-4 static-shadow">
-            <marquee><span style="color: #1c294e;font-size: 20px"> CHÚC CÁC THÀNH VIÊN TRONG NHÓM HOÀN THÀNH TỐT CÔNG VIỆC</span></marquee>
-        </nav>
-        <nav >
-            <center>
-            <h2 style="opacity: 0.8;">   KHOA HỌC TRONG CÁCH LÀM VIỆC
-            </h2></center>
-        </nav>
-        <hr>
-        <img src="img/powerpoint-chen-anh.jpg" style="width:1173px;height:513px;margin-left: 40px;">
-        <br>
+     
     </div>
     <!-- Bootstrap core JavaScript-->
 </div>

@@ -88,8 +88,7 @@
 {{--                @foreach($user as $User)--}}
                 {{--                    {{$User -> tenduan}}--}}
                 {{--                @endforeach--}}
-                <a name="" id="" class="btn btn-primary " href="" role="button" style="margin-left: 40em">Hoàn thành</a>
-                <a name="" id="" class="btn btn-primary " href="" role="button" >Chưa hoàn thành</a>
+
             </h2>
         </nav>
 

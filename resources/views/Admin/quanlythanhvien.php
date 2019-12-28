@@ -26,7 +26,6 @@
             <div style="color: white" >DAILY-WORK<sup>(^^)</sup></div>
         </a>
         <!-- Divider -->
-        <hr class="sidebar-divider my-3">
         <li>
             <img src="img/login.png" width="100px" ;height="100px">
         </li>
@@ -37,30 +36,27 @@
         <hr>
         <!-- Nav Item - Dashboard -->
         <li>
-            <a href="quanly">
-                <i>
-                    <span class="text" >QUẢN LÝ DỰ ÁN</span>
-                </i>
+            <a href="thongtinduan">
+                <b style="color: lavender">
+                    <span class="text" >THÔNG TIN DỰ ÁN </span>
+                </b>
             </a>
         </li>
         <hr>
         <li>
             <a href="">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-flag" >
+                    <b class="fas fa-flag" style="color: lavender" >
                         QUẢN LÝ THÀNH VIÊN
-                    </i>
+                    </b>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="qlthanhvien">THÀNH VIÊN</a>
-                    <a class="dropdown-item" href="baocaoduan">BÁO CÁO DỰ ÁN</a>
-
+                <div class="list-group">
+                    <a href="qlthanhvien" class="list-group-item bg-gray-700 text-white">Thông tin thành viên</a>
+                    <a href="baocaoduan" class="list-group-item bg-gray-700 text-white">Công việc thành viên</a>
+                    <a href="thongkebaocao" class="list-group-item bg-gray-700 text-white">Theo dõi quá trình</a>
                 </div>
             </a>
         </li>
-
-        <hr>
-
 
         <!-- Sidebar Toggler (Sidebar) -->
         <hr class="sidebar-divider my-3">
@@ -77,7 +73,7 @@
                     <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                     <div class="info-box hover-expand-effect">
                         <div class="icon">
-                            <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')">+ THÊM MỚI THÀNH VIÊN</button>
+                            <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')">+ THÊM MỚI THÀNH VIÊN DỰ ÁN</button>
                         </div>
 
                     </div>
@@ -92,25 +88,25 @@
                             <div class="row clearfix">
                                 <div class="container-fluid">
                                     <div class="row content">
-                                        <div class="container bg-light">
+                                        <div class="container bg-gradient-light">
                                             <table class="table table-bordered table-responsive table-striped ">
                                                 <thead>
                                                 <tr style="font-size: 13px">
                                                     <th>MÃ THÀNH VIÊN</th>
-                                                    <th>HỌ VÀ TÊN</th>
-                                                    <th>ĐỊA CHỈ</th>
-                                                    <th>SỐ ĐIỆN THOẠI</th>
-                                                    <th>TÊN TÀI KHOẢN </th>
-                                                    <th>MẬT KHẨU</th>
+                                                    <th style="width: 15em">HỌ VÀ TÊN</th>
+                                                    <th style="width: 12em">ĐỊA CHỈ</th>
+                                                    <th style="width: 13em">SỐ ĐIỆN THOẠI</th>
+                                                    <th style="width: 13em">EMAIL </th>
+                                                    <th style="width: 13em">MẬT KHẨU</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
-                                                <tr ng-repeat="reg in registers">
+                                                <tbody style="color: #1c294e">
+                                                <tr ng-repeat="reg in users">
                                                     <td>{{ reg.id }}</td>
                                                     <td>{{ reg.hovaten }}</td>
                                                     <td>{{ reg.diachi }}</td>
                                                     <td>{{ reg.sdt }}</td>
-                                                    <td>{{ reg.tentaikhoan }}</td>
+                                                    <td>{{ reg.email }}</td>
                                                     <td>{{ reg.matkhau }}</td>
                                                     <td>
                                                         <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',reg.id)" >Sửa</button>
@@ -129,41 +125,41 @@
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                         </div>
                                                         <div class="modal-body" >
-                                                            <form name="frmregister" action="getAddregister" method="POST" class="form-horizontal">
+                                                            <form name="frmuser" action="getAddregister" method="POST" class="form-horizontal">
                                                                 <div class="form-group">
                                                                     <label for="inputEmail3" class="col-sm-3 control-label">HỌ VÀ TÊN</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="hovaten" name="hovaten" placeholder="Vui lòng nhập tên dự án" ng-model="hovaten" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.hovaten.$error.required">Vui lòng nhập họ và tên</span>
+                                                                        <input type="text" class="form-control" id="hovaten" name="hovaten" placeholder="Vui lòng nhập họ và tên" ng-model="hovaten" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.hovaten.$error.required">Vui lòng nhập họ và tên</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputEmail3" class="col-sm-3 control-label">ĐỊA CHỈ</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="diachi" name="diachi" placeholder="Vui lòng nhập nhiệm vụ" ng-model="diachi"  ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.diachi.$error.required">Vui lòng nhập Chức năng</span>
+                                                                        <input type="text" class="form-control" id="diachi" name="diachi" placeholder="Vui lòng nhập chức năng" ng-model="diachi"  ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.diachi.$error.required">Vui lòng nhập Chức năng</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputEmail3" class="col-sm-4 control-label">SỐ ĐIỆN THOẠI</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="sdt" name="sdt" placeholder="Vui lòng nhập người thực hiện" ng-model="sdt" ng-required="true" >
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.sdt.$error.required">vui lòng nhập số điện thoại</span>
+                                                                        <input type="text" class="form-control" id="sdt" name="sdt" placeholder="Vui lòng nhập số điện thoại" ng-model="sdt" ng-required="true" >
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.sdt.$error.required">vui lòng nhập số điện thoại</span>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-4 control-label">TÊN ĐĂNG NHẬP</label>
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">EMAIL</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="tendangnhap" name="tentaikhoan" placeholder="Vui lòng nhập ngày kết thúc" ng-model="tentaikhoan" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.tentaikhoan.$error.required">Vui lòng nhập tên đăng nhập</span>
+                                                                        <input type="text" class="form-control" id="email" name="email" placeholder="Vui lòng nhập địa chỉ Email" ng-model="email" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.email.$error.required">Vui lòng nhập tên đăng nhập</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputEmail3" class="col-sm-4 control-label">MẬT KHẨU</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="password" class="form-control" id="matkhau" name="matkhau" placeholder="Vui lòng nhập ngày kết thúc" ng-model="matkhau" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmregister.matkhau.$error.required">Vui lòng nhập mật khẩu</span>
+                                                                        <input type="text" class="form-control" id="matkhau" name="matkhau" placeholder="Vui lòng nhập địa chỉ Email" ng-model="matkhau" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.matkhau.$error.required">Vui lòng nhập tên đăng nhập</span>
                                                                     </div>
                                                                 </div>
                                                             </form>

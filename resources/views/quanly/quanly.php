@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
 
-    <title>ADMIN</title>
+    <title>QUẢN LÝ DỰ ÁN </title>
     <!-- Load Bootstrap CSS -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,63 +12,42 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-<!--    <link href="css/trello.css" rel="stylesheet">-->
+
 </head>
 
 <body class="theme-red">
-
-<!-- #END# Search Bar -->
-<!-- Top Bar -->
-
 <div id="wrapper">
-<!-- #Top Bar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-        <div style="color: white" >DAILY-WORK<sup>(^^)</sup></div>
-    </a>
-    <!-- Divider -->
-    <hr class="sidebar-divider my-3">
-    <li>
-        <img src="img/login.png" width="100px" ;height="100px">
-    </li>
-    <br>
-    <li>
-        <span style="color: white">ADMIN</span>
-    </li>
-    <hr>
-    <!-- Nav Item - Dashboard -->
-    <li>
-        <a href="quanly">
-            <i>
-                <span class="text" >QUẢN LÝ DỰ ÁN</span>
-            </i>
+    <!-- #Top Bar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+            <div style="color: white" >DAILY-WORK<sup>(^^)</sup></div>
         </a>
-    </li>
-    <hr>
-    <li>
-        <a href="">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-flag" >
-                    QUẢN LÝ THÀNH VIÊN
-                </i>
+        <!-- Divider -->
+        <li>
+            <img src="img/login.png" width="100px" ;height="100px">
+        </li>
+        <br>
+        <li>
+            <span style="color: white">ADMIN</span>
+        </li>
+        <hr>
+        <!-- Nav Item - Dashboard -->
+        <li>
+            <a href="quanly">
+                <b style="color: lavender ;">
+                    <span class="text" >QUẢN LÝ DỰ ÁN</span>
+                </b>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="qlthanhvien">THÀNH VIÊN</a>
-                <a class="dropdown-item" href="baocaoduan">BÁO CÁO DỰ ÁN</a>
-
-            </div>
-        </a>
-    </li>
-
-    <hr>
+        </li>
+        <hr>
 
 
-    <!-- Sidebar Toggler (Sidebar) -->
-    <hr class="sidebar-divider my-3">
-</ul>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <hr class="sidebar-divider my-3">
+    </ul>
 
-<div style="width: 100%;background-color: #a5cae0" class="content" >
+     <div style="width: 100%;background-color: #a5cae0" class="content" >
     <div class="container-fluid">
         <nav style="background-color: #dddfeb">
             <h4>---QUẢN LÝ DỰ ÁN---</h4>
@@ -79,7 +58,7 @@
 <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                 <div class="info-box hover-expand-effect">
                     <div class="icon">
-                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')">+ THÊM MỚI DỰ ÁN</button>
+                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button bg-gradient-light border rounded text-dark" ng-click="modal('add')">+ THÊM MỚI DỰ ÁN</button>
                     </div>
 
                 </div>
@@ -87,35 +66,35 @@
             </div>
         </div>
         <hr>
-        <div class="row clearfix" >
+        <div class="row clearfix"  >
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                 <div class="card">
                     <div class="header">
                         <div class="row clearfix">
                             <div class="container-fluid">
                                 <div class="row content">
-                                    <div class="container bg-light">
+                                    <div class="container bg-gradient-light">
                                         <table class="table table-bordered table-responsive table-striped ">
                                             <thead>
-                                            <tr style="font-size: 13px">
+                                            <b style="font-size: 13px">
                                                 <th>MÃ DỰ ÁN</th>
                                                 <th>TÊN DỰ ÁN</th>
                                                 <th>CHI PHÍ DỰ ÁN</th>
                                                 <th>SỐ THÀNH VIÊN THỰC HIỆN</th>
                                                 <th>NGÀY BẮT ĐẦU</th>
                                                 <th>NGÀY KẾT THÚC</th>
-                                            </tr>
+                                            </b>
                                             </thead>
-                                            <tbody>
+                                            <tbody style="color: #1c294e">
                                             <tr ng-repeat="da in duans">
                                                 <td>{{ da.id }}</td>
                                                 <td>{{ da.tenduan }}</td>
                                                 <td>{{ da.chiphi }}</td>
-                                                <td>{{ da.sothanhvien }}</td>
+                                                <td>{{ da.sothanhvien }} (thành viên)</td>
                                                 <td>{{ da.ngaybatdau }}</td>
                                                 <td>{{ da.ngayketthuc }}</td>
                                                 <td>
-                                                    <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >Sửa</button>
+                                                    <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >Sửa</button>
                                                     <button class="glyphicon glyphicon-remove btn btn-danger btn-xs btn-delete" ng-click="cfDelete(da.id)">Xóa</button>
                                                 </td>
                                             </tr>
@@ -185,10 +164,10 @@
                 </div>
             </div>
         </div>
+
     </div>
+     </div>
 </div>
-
-
 <script type="text/javascript" src="angularjs/angular.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!--<script type="text/javascript" src="angularjs/angular.js"></script>-->
@@ -198,11 +177,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 
-</div>
 </body>
 
 </html>

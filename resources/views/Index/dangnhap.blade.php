@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="my-dangnhap" ng-controller="HomeController">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,9 +40,6 @@
             </a>
         </li>
         <hr class="sidebar-divider my-3">
-
-
-
         <div class="text-lg-right " style="margin-top:40px">
             <span id="sidebarToggle"> <span class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-10">
@@ -63,27 +60,24 @@
             <div class="row"  style="background-color:ghostwhite ;border-radius: 30px;margin-top:30px; height: 40em;width: 100em;">
                 <div class="col"><img src="https://i.pinimg.com/originals/d1/b8/5c/d1b85c34a2d3c64051e1ea924b78ba1c.jpg" width="300" height="300" class="Avatar" style="margin-top: 30px;margin-left: 100px; border-radius: 20px;" ></div>
                 <div class="col">
-                    <form class="login100-form validate-form" method=post >
+                    <form class="login100-form validate-form" class="user" method="post" role="form" action="dangnhap">
                         <h3 align="center" style="font-size: 3em;margin-top: 30px;"><b>ĐĂNG NHẬP</b></h3> <br>
                         <div class="container" style="font-size: 1.5em;">
-                            <i class="fa fa-users"></i>
-                            <label for="">TÊN TÀI KHOẢN</label>
-                            <input type="text" class="form-control" placeholder="nhập tài khoản của bạn" style="font-size: 13px;">
-                            <br>
-                            <i class="fa fa-key"></i>
-                            <label for="">MẬT KHẨU</label>
-                            <input type="password" class="form-control" placeholder="nhập mật khẩu" style="font-size: 13px;">
+                            <form >
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                <i class="fa fa-users"></i>
+                                <label for="">TÊN TÀI KHOẢN</label>
+                                <input type="text" name="email" class="form-control" placeholder="nhập tài khoản của bạn"  style="font-size: 13px;">
+                                <br>
+                                <i class="fa fa-key"></i>
+                                <label for="">MẬT KHẨU</label>
+                                <input type="text" name="matkhau" class="form-control" placeholder="nhập mật khẩu" style="font-size: 13px;">
+                                <br>
+                               <input type="submit" name="submit" class="form-control btn-primary" value="ĐĂNG NHẬP">
+                            </form>
                         </div>
                         <br>
-                        <div class="col" >
-                            <a href="duan" style="text-decoration: none">
 
-                            <button type="button" class="btn btn-outline-primary" style="margin-left: 12em;font-size: 1.5em;">
-                                ĐỒNG Ý
-                            </button>
-                            </a>
-
-                        </div>
 
                     </form>
                 </div>
@@ -108,8 +102,6 @@
 {{--                    <input id="rememberme" type="checkbox" name="rememberme" value="forever">--}}
 {{--                    <span>Remember me</span>--}}
 {{--                </div>--}}
-{{--                <div class="g-recaptcha" data-sitekey="6Ld5Cr0UAAAAAJCGVCDjc0cSYPpZq7jM6IWCoNxq"></div>--}}
-{{--                <span class="badge" ng-bind-html="loginMessage"></span>--}}
 {{--                <button type="submit" class="btn btn-success btn-simple btn-round btn-block" ng-disabled="loginform.$invalid">Log In</button>--}}
 {{--                <a href="#">Lost your password?</a>--}}
 {{--            </form>--}}

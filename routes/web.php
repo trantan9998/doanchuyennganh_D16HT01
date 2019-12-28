@@ -41,7 +41,16 @@ Route::get('postbai','HomeController@postbai');
 Route::get('quanly','HomeController@quanlyduan');
 Route::get('qlthanhvien','HomeController@quanlythanhvien');
 Route::get('baocaoduan','HomeController@baocaoduan');
-Route::get('dangnhap','HomeController@dangnhap');
+Route::get('thongtinduan','HomeController@thongtinduan');
+
+
+Route::get('dangnhap','HomeController@getdangnhap');
+Route::post('dangnhap','HomeController@postdangnhap');
+
+Route::get('webcomee','HomeController@webcomee');
+Route::post('login','HomeController@login');
+Route::get('thongkebaocao','HomeController@thongkebaocao');
+
 //Route::get('/','HomeController@dangky');
 
 //Route::post('/','HomeController@home');
