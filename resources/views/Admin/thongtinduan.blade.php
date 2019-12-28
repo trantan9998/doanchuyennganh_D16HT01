@@ -15,8 +15,27 @@
 
 <body class="theme-red">
 
-<!-- #END# Search Bar -->
-<!-- Top Bar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em">
+    <div class="navbar-collapse collapse w-25 order-1 order-xl-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto text-white">
+            <b> BỘ PHẬN - TRƯỞNG NHÓM</b>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TÀI KHOẢN</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Thông tin user</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div id="wrapper">
     <!-- #Top Bar -->
@@ -62,11 +81,13 @@
         <hr class="sidebar-divider my-3">
     </ul>
     <div style="width: 100%;background-color: #a5cae0" class="content" >
-        <nav style="background-color: #dddfeb">
-            <h4>---THÔNG TIN DỰ ÁN---</h4>
-        </nav>
 
         <div class="container-fluid">
+            <br>
+            <nav >
+                <h5 class="bg-gradient-primary text-white"><b>THÔNG TIN DỰ ÁN \</b></h5>
+            </nav>
+            <br>
     <!-- Lists container -->
     <div class="row clearfix"  >
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >

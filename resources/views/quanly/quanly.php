@@ -58,7 +58,7 @@
 <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                 <div class="info-box hover-expand-effect">
                     <div class="icon">
-                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button bg-gradient-light border rounded text-dark" ng-click="modal('add')">+ THÊM MỚI DỰ ÁN</button>
+                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button bg-gradient-light border rounded text-dark" ng-click="modal('add')"><b>+ THÊM MỚI DỰ ÁN</b></button>
                     </div>
 
                 </div>
@@ -75,14 +75,14 @@
                                 <div class="row content">
                                     <div class="container bg-gradient-light">
                                         <table class="table table-bordered table-responsive table-striped ">
-                                            <thead>
-                                            <b style="font-size: 13px">
-                                                <th>MÃ DỰ ÁN</th>
-                                                <th>TÊN DỰ ÁN</th>
+                                            <thead style="font-size: 13px;color: #985f0d">
+                                            <b>
+                                                <th >MÃ DỰ ÁN</th>
+                                                <th style="width: 16em">TÊN DỰ ÁN</th>
                                                 <th>CHI PHÍ DỰ ÁN</th>
-                                                <th>SỐ THÀNH VIÊN THỰC HIỆN</th>
-                                                <th>NGÀY BẮT ĐẦU</th>
-                                                <th>NGÀY KẾT THÚC</th>
+                                                <th  style="width: 18em">SỐ THÀNH VIÊN THỰC HIỆN</th>
+                                                <th style="color: white;width: 10em;" bgcolor="#00008b">NGÀY BẮT ĐẦU</th>
+                                                <th style="color: white;width: 10em;" bgcolor="#8b0000">NGÀY KẾT THÚC</th>
                                             </b>
                                             </thead>
                                             <tbody style="color: #1c294e">
@@ -90,9 +90,9 @@
                                                 <td>{{ da.id }}</td>
                                                 <td>{{ da.tenduan }}</td>
                                                 <td>{{ da.chiphi }}</td>
-                                                <td>{{ da.sothanhvien }} (thành viên)</td>
-                                                <td>{{ da.ngaybatdau }}</td>
-                                                <td>{{ da.ngayketthuc }}</td>
+                                                <td>{{ da.sothanhvien }} <b>THÀNH VIÊN</b></td>
+                                                <td><i>{{ da.ngaybatdau }}</i></td>
+                                                <td><i>{{ da.ngayketthuc }}</i></td>
                                                 <td>
                                                     <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >Sửa</button>
                                                     <button class="glyphicon glyphicon-remove btn btn-danger btn-xs btn-delete" ng-click="cfDelete(da.id)">Xóa</button>

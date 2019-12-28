@@ -17,7 +17,27 @@
 
 <!-- #END# Search Bar -->
 <!-- Top Bar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em">
+    <div class="navbar-collapse collapse w-25 order-1 order-xl-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto text-white">
+           <b> BỘ PHẬN - TRƯỞNG NHÓM</b>
+        </ul>
+    </div>
 
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TÀI KHOẢN</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Thông tin user</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div id="wrapper">
     <!-- #Top Bar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
@@ -64,8 +84,9 @@
 
     <div style="width: 100%;background-color: #a5cae0" class="content" >
         <div class="container-fluid">
-            <nav style="background-color: #dddfeb">
-                <h4>QUẢN LÝ THÀNH VIÊN</h4>
+            <br>
+            <nav >
+                <h5 class="bg-gradient-primary text-white"><b>QUẢN LÝ THÀNH VIÊN \</b></h5>
             </nav>
             <br>
             <div class="row clearfix">
@@ -73,7 +94,7 @@
                     <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                     <div class="info-box hover-expand-effect">
                         <div class="icon">
-                            <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')">+ THÊM MỚI THÀNH VIÊN DỰ ÁN</button>
+                            <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')"><b>+ THÊM MỚI THÀNH VIÊN DỰ ÁN</b></button>
                         </div>
 
                     </div>
@@ -91,10 +112,10 @@
                                         <div class="container bg-gradient-light">
                                             <table class="table table-bordered table-responsive table-striped ">
                                                 <thead>
-                                                <tr style="font-size: 13px">
-                                                    <th>MÃ THÀNH VIÊN</th>
+                                                <tr style="font-size: 13px; color: darkblue">
+                                                    <th>ID</th>
                                                     <th style="width: 15em">HỌ VÀ TÊN</th>
-                                                    <th style="width: 12em">ĐỊA CHỈ</th>
+                                                    <th style="width: 15em">ĐỊA CHỈ</th>
                                                     <th style="width: 13em">SỐ ĐIỆN THOẠI</th>
                                                     <th style="width: 13em">EMAIL </th>
                                                     <th style="width: 13em">MẬT KHẨU</th>

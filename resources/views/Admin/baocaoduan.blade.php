@@ -17,7 +17,27 @@
 
 <!-- #END# Search Bar -->
 <!-- Top Bar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em">
+    <div class="navbar-collapse collapse w-25 order-1 order-xl-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto text-white">
+            <b> BỘ PHẬN - TRƯỞNG NHÓM</b>
+        </ul>
+    </div>
 
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TÀI KHOẢN</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Thông tin user</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div id="wrapper">
     <!-- #Top Bar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
