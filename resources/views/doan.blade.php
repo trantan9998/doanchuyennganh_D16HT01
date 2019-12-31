@@ -9,7 +9,6 @@
     <title>DAILY WORK</title>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/trello.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -85,7 +84,7 @@
             </h2></center>
         </nav>
         <hr>
-        <img src="img/powerpoint-chen-anh.jpg" style="width:1173px;height:513px;margin-left: 40px;">
+        <img src="img/powerpoint-chen-anh.jpg" style="width:1173px;height:513px;margin-left: 40px;border-radius: 50px;">
         <br>
     </div>
     <!-- Bootstrap core JavaScript-->

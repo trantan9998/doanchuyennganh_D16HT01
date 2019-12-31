@@ -20,12 +20,6 @@ class UserTablesSeeder extends Seeder
             'email' =>'phuc@gmail.com',
             'matkhau' =>Hash::make ('12345'),
         ]);
-        User::create([
-            'hovaten' =>'Trần Văn Tân',
-            'diachi' =>'bình phước',
-            'sdt' =>'08938373',
-            'email' =>'vantan@gmail.com',
-            'matkhau' =>Hash::make ('12345'),
-        ]);
+
     }
 }

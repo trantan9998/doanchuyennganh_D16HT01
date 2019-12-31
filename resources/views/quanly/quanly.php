@@ -14,8 +14,28 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
 <body class="theme-red">
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-warning" style="height: 2em">
+    <div class="navbar-collapse collapse w-25 order-1 order-xl-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto text-white">
+            <b> BỘ PHẬN - QUẢN LÝ</b>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TÀI KHOẢN</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Thông tin user</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div id="wrapper">
     <!-- #Top Bar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1c294e;height: 600px;">
@@ -49,8 +69,9 @@
 
      <div style="width: 100%;background-color: #a5cae0" class="content" >
     <div class="container-fluid">
-        <nav style="background-color: #dddfeb">
-            <h4>---QUẢN LÝ DỰ ÁN---</h4>
+        <br>
+        <nav >
+            <h5 class="bg-gradient-primary text-white"><b>QUẢN LÝ DỰ ÁN  \</b></h5>
         </nav>
         <br>
         <div class="row clearfix">
@@ -58,7 +79,7 @@
 <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                 <div class="info-box hover-expand-effect">
                     <div class="icon">
-                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button bg-gradient-light border rounded text-dark" ng-click="modal('add')"><b>+ THÊM MỚI DỰ ÁN</b></button>
+                        <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button bg-gradient-light border rounded text-dark" ng-click="modal('add')"><b>+ TRIỂN KHAI DỰ ÁN</b></button>
                     </div>
 
                 </div>
@@ -89,7 +110,7 @@
                                             <tr ng-repeat="da in duans">
                                                 <td>{{ da.id }}</td>
                                                 <td>{{ da.tenduan }}</td>
-                                                <td>{{ da.chiphi }}</td>
+                                                <td><b style="color: #4f1915">{{ da.chiphi }}</b> (VND)</td>
                                                 <td>{{ da.sothanhvien }} <b>THÀNH VIÊN</b></td>
                                                 <td><i>{{ da.ngaybatdau }}</i></td>
                                                 <td><i>{{ da.ngayketthuc }}</i></td>
@@ -110,48 +131,50 @@
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                     </div>
                                                     <div class="modal-body" >
-                                                        <form name="frmDuAn" action="getAdd" method="POST" class="form-horizontal">
+                                                        <form name="frmDuAn" action="getAdd" method="POST" class="form-horizontal text-primary ">
+                                                            <b>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">Tên Dự Án</label>
+                                                                <label for="inputEmail3" class="col-sm-3 control-label">DỰ ÁN</label>
                                                                 <div class="col-sm-9">
                                                                     <input type="text" class="form-control" id="tenduan" name="tenduan" placeholder="Vui lòng nhập tên dự án" ng-model="tenduan" ng-required="true" />
                                                                     <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.tenduan.$error.required">Vui lòng nhập tên dự án</span>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">Chi Phí Dự Án</label>
+                                                                <label for="inputEmail3" class="col-sm-12 control-label">CHI PHÍ CHO DỰ ÁN</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="text" class="form-control" id="chiphi" name="chiphi" placeholder="Vui lòng nhập nhiệm vụ" ng-model="chiphi"  ng-required="true" />
-                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.chiphi.$error.required">Vui lòng nhập Chức năng</span>
+                                                                    <input type="text" class="form-control" id="chiphi" name="chiphi" placeholder="Vui lòng nhập số tiền " ng-model="chiphi"  ng-required="true" />
+                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.chiphi.$error.required">vui lòng nhập số tiền <i style="color: #985f0d">(ĐƠN VỊ: ĐỒNG)</i></span>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-4 control-label">Số Thành Viên</label>
+                                                                <label for="inputEmail3" class="col-sm-12 control-label">THÀNH VIÊN THAM GIA</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="text" class="form-control" id="sothanhvien" name="sothanhvien" placeholder="Vui lòng nhập người thực hiện" ng-model="sothanhvien" ng-required="true" >
-                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.sothanhvien.$error.required">Vui lòng nhập Tên công việc</span>
+                                                                    <input type="text" class="form-control" id="sothanhvien" name="sothanhvien" placeholder="Vui lòng nhập số thành viên thực hiện" ng-model="sothanhvien" ng-required="true" >
+                                                                    <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.sothanhvien.$error.required">Vui lòng nhập số thành viên thực hiện </span>
                                                                 </div>
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-3 control-label">Ngày Bắt Đầu</label>
+                                                                <label for="inputEmail3" class="col-sm-12 control-label">NGÀY BẮT ĐẦU DỰ ÁN</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="date" class="form-control" id="ngaybatdau" name="ngaybatdau" placeholder="Vui lòng nhập ngày kết thúc" ng-model="ngaybatdau" ng-required="true" />
+                                                                    <input type="date" class="form-control" id="ngaybatdau" name="ngaybatdau" placeholder="Vui lòng nhập ngày bắt đầu dự án" ng-model="ngaybatdau" ng-required="true" />
                                                                     <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.ngaybatdau.$error.required">Vui lòng nhập ngày Bắt đầu</span>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-4 control-label">Ngày Kết Thúc</label>
+                                                                <label for="inputEmail3" class="col-sm-12 control-label">NGÀY KẾT THÚC DỰ ÁN</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="date" class="form-control" id="ngayketthuc" name="ngayketthuc" placeholder="Vui lòng nhập ngày kết thúc" ng-model="ngayketthuc" ng-required="true" />
+                                                                    <input type="date" class="form-control" id="ngayketthuc" name="ngayketthuc" placeholder="Vui lòng nhập ngày kết thúc dự án" ng-model="ngayketthuc" ng-required="true" />
                                                                     <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.ngayketthuc.$error.required">Vui lòng nhập ngày kết thúc</span>
                                                                 </div>
                                                             </div>
+                                                            </b>
                                                         </form>
 
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-primary" ng-click="save(state,id)">Lưu</button>
+                                                        <button type="button" class="btn btn-primary" ng-click="save(state,id)">HOÀN TẤT DỰ ÁN</button>
                                                     </div>
                                                 </div><!-- /.modal-content -->
                                             </div><!-- /.modal-dialog -->

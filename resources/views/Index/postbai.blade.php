@@ -13,6 +13,27 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em;font-size: 15px;">
+    <div class="navbar-collapse collapse w-25 order-1 order-xl-1 dual-collapse2">
+        <ul class="navbar-nav mr-auto text-white">
+            <b> BỘ PHẬN - THÀNH VIÊN</b>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TÀI KHOẢN</a>
+                <div class="dropdown-menu " style="font-size: 13px;">
+                    <a class="dropdown-item" href="#">Thông tin user</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -137,6 +158,10 @@
 
     <!-- Bootstrap core JavaScript-->
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="js/sb-admin-2.min.js"></script>
 <script src="js/jsckeditor.js"></script>

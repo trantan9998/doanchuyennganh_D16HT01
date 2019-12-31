@@ -8,7 +8,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 		$scope.state = state;
 		switch (state){
 			case "add":
-				$scope.frmTitle = "THÊM MỚI DỰ ÁN";
+				$scope.frmTitle = "KHỞI TẠO DỰ ÁN";
 				$scope.tenduan = null;
 				$scope.chiphi = null;
 				$scope.sothanhvien = null;

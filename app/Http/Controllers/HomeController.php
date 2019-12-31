@@ -100,7 +100,7 @@ class HomeController extends Controller
         }
         else
         {
-            return redirect('dangnhap')->with('thongbao','đăng nhập không thành công');
+            return back()->with('thongbao','đăng nhập không thành công');
         }
 
     }
