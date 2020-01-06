@@ -2,7 +2,7 @@
 /*
 author:dandev
 AuthorURI:dandev.net
-File:       config.php
+
 */
 $DB_host = "127.0.0.1";
 $DB_user = "root";

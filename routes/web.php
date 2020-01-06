@@ -35,21 +35,27 @@ Route::get('/','HomeController@doan');
 //Route::get ('/','HomeController@login');
 //Route::get('/','HomeController@aa');
 
-Route::get('duan','HomeController@duan');
-Route::get('congviec','Homecontroller@congviec');
-Route::get('postbai','HomeController@postbai');
+
+//QUẢN LÝ
 Route::get('quanly','HomeController@quanlyduan');
+Route::get('khachhang','HomeController@khachhang');
+
+//QUẢN LÝ NHÓM
 Route::get('qlthanhvien','HomeController@quanlythanhvien');
 Route::get('baocaoduan','HomeController@baocaoduan');
 Route::get('thongtinduan','HomeController@thongtinduan');
+Route::get('thongkebaocao','HomeController@thongkebaocao');
 
+// THÀNH VIÊN
+Route::get('duan','HomeController@duan');
+Route::get('congviec','Homecontroller@congviec');
+Route::get('postbai','HomeController@postbai');
 
 Route::get('dangnhap','HomeController@getdangnhap');
 Route::post('dangnhap','HomeController@postdangnhap');
 
 Route::get('webcomee','HomeController@webcomee');
 Route::post('login','HomeController@login');
-Route::get('thongkebaocao','HomeController@thongkebaocao');
 
 //Route::get('/','HomeController@dangky');
 
@@ -76,4 +82,10 @@ Route::post('editregister/{id}',['uses' => 'registerController@postEditregister'
 Route::get('deleteregister/{id}',['uses' => 'registerController@getDeleteregister']);
 Route::get('reader/{id}',['users'=>'HomeController@dangnhap']);
 
+//QUẢN LÝ CÔNG VIỆC
+Route::get('listcongviec',['uses' => 'congvieccontroller@getlistcongviec']);
+Route::post('addcongviec',['uses' => 'congvieccontroller@getAddcongviec']);
+Route::get('editcongviec/{id}',['uses' => 'congvieccontroller@getEditcongviec']);
+Route::post('editcongviec/{id}',['uses' => 'congvieccontroller@postEditcongviec']);
+Route::get('deletecongviec/{id}',['uses' => 'congvieccontroller@getDeletecongviec']);
 //đăng nhập thành viên

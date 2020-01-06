@@ -18,6 +18,7 @@ class CreateDuanTable extends Migration
             $table->string('tenduan');
             $table->string('chiphi');
             $table->string ("sothanhvien");
+            $table->string ("nguoichiutrachnhiem");
             $table->string('ngaybatdau') ;
             $table->string('ngayketthuc');
             $table->timestamps();

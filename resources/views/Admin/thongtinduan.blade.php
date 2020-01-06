@@ -102,10 +102,10 @@
                                         <b >
                                             <th >MÃ DỰ ÁN</th>
                                             <th style="width: 16em">TÊN DỰ ÁN</th>
-                                            <th>CHI PHÍ DỰ ÁN</th>
+                                            <th style="width: 10em">CHI PHÍ DỰ ÁN</th>
                                             <th  style="width: 19em">SỐ THÀNH VIÊN THỰC HIỆN</th>
-                                            <th style="color: white;width: 16em;" bgcolor="#00008b">NGÀY BẮT ĐẦU</th>
-                                            <th style="color: white;width: 16em;" bgcolor="#8b0000">NGÀY KẾT THÚC</th>
+                                            <th style="color: white;width: 15em;" bgcolor="#00008b">NGÀY BẮT ĐẦU</th>
+                                            <th style="color: white;width: 15em;" bgcolor="#8b0000">NGÀY KẾT THÚC</th>
                                         </b>
                                         </thead>
                                         <tbody style="color: #1c294e">

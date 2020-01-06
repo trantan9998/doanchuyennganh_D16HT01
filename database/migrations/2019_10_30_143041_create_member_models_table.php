@@ -21,9 +21,9 @@ class CreateMemberModelsTable extends Migration
                 $table->string('chucnang');
                 $table->string('tencongviec');
                 $table->string ('nhiemvu');
-                $table->string ('tiendo');
-                $table->string ('mucdohoanthanh');
-                $table->string ('noidung');
+                $table->string ('tiendo') ->nullable();
+                $table->string ('mucdohoanthanh')->nullable();
+                $table->string ('noidung')->nullable();
                 $table->string ('upload_hinhanh')->nullable();
                 $table->string ('upload_file')->nullable();
 //                $table->foreign('id_member')->references('id')->on('du_ans');

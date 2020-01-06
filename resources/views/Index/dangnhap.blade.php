@@ -40,18 +40,7 @@
             </a>
         </li>
         <hr class="sidebar-divider my-3">
-        <div class="text-lg-right " style="margin-top:40px">
-            <span id="sidebarToggle"> <span class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                    <span class="text" style="background-color: #a3b6ee">↔</span>
-                    <span class="icon text-white-10">
-                      <i class="fas fa-flag"></i>
-                    </span>
-                </span>
-            </span>
-        </div>
+
 
     </ul>
 

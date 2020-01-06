@@ -19,10 +19,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // BỘ PHẬN QUẢN LÝ
     public function quanlyduan()
     {
        return view('quanly.quanly');
     }
+    public function khachhang()
+    {
+       return view('quanly.khachhang');
+    }
+
+
+    //BỘ PHẬN QUẢN LÝ NHÓM
     public function thongtinduan()
     {
         $thongtinduan=DuAn::all();
@@ -30,39 +39,31 @@ class HomeController extends Controller
             'thongtinduan'=>$thongtinduan,
         ]);
     }
-
-
     public function quanlythanhvien()
     {
         $duan=DuAn::all();
         return View('Admin.quanlythanhvien',[
             'duan'=>$duan,
         ]);
+    }
+    public function baocaoduan()
+    {
+        return view('Admin.baocaoduan');
 
     }
+    public function thongkebaocao()
+    {
+        return view('Admin.theodoiduan');
+    }
 
-    // QUẢN LÝ DỰ ÁN
+
+    // THÀNH VIÊN NHÓM
     public function duan(){
         $duan=DuAn::all();
         return View('index.duan',[
             'duan'=>$duan,
         ]);
     }
-
-    //Xử lý công việc cho từng thành viên
-    public function baocaoduan()
-    {
-        $member=Member_model::all();
-        return view('Admin.baocaoduan',[
-            'member'=>$member,
-        ]);
-    } public function thongkebaocao()
-    {
-        return view('Admin.thongkebaocao');
-    }
-
-
-    // QUẢN LÝ CÔNG VIỆC
     public function congviec()
     {
         $congviec = Member_model::all();
@@ -104,16 +105,6 @@ class HomeController extends Controller
         }
 
     }
-
-
-//    public function webcomee(){
-//
-//        return View('quanlythanhvien.webcomee');
-//    }
-//
-//    public function  logins(Request $login){
-//        return View('quanlythanhvien.login');
-//    }
 
       public function postbai(){
             $postbai= Member_model::all();

@@ -16,6 +16,7 @@ class DuAnController extends Controller
         $duan->tenduan  = $request->tenduan;
         $duan->chiphi = $request->chiphi;
         $duan->sothanhvien = $request->sothanhvien;
+        $duan->nguoichiutrachnhiem = $request->nguoichiutrachnhiem;
         $duan->ngaybatdau = $request->ngaybatdau;
         $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();
@@ -31,6 +32,7 @@ class DuAnController extends Controller
         $duan->tenduan  = $request->tenduan;
         $duan->chiphi = $request->chiphi;
         $duan->sothanhvien = $request->sothanhvien;
+        $duan->nguoichiutrachnhiem = $request->nguoichiutrachnhiem;
         $duan->ngaybatdau = $request->ngaybatdau;
         $duan->ngayketthuc = $request->ngayketthuc;
         $duan->save();

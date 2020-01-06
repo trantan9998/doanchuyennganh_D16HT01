@@ -49,7 +49,7 @@
         </li>
         <br>
         <li>
-            <span style="color: white">ADMIN</span>
+            <span style="color: white">QUẢN LÝ</span>
         </li>
         <hr>
         <!-- Nav Item - Dashboard -->
@@ -61,10 +61,13 @@
             </a>
         </li>
         <hr>
-
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <hr class="sidebar-divider my-3">
+        <li>
+            <a href="khachhang">
+                <b style="color: lavender ;">
+                    <span class="text" >KHÁCH HÀNG</span>
+                </b>
+            </a>
+        </li>
     </ul>
 
      <div style="width: 100%;background-color: #a5cae0" class="content" >
@@ -98,10 +101,11 @@
                                         <table class="table table-bordered table-responsive table-striped ">
                                             <thead style="font-size: 13px;color: #985f0d">
                                             <b>
-                                                <th >MÃ DỰ ÁN</th>
+                                                <th >MÃ SỐ</th>
                                                 <th style="width: 16em">TÊN DỰ ÁN</th>
                                                 <th>CHI PHÍ DỰ ÁN</th>
                                                 <th  style="width: 18em">SỐ THÀNH VIÊN THỰC HIỆN</th>
+                                                <th  style="width: 13em">NGƯỜI PHỤ TRÁCH</th>
                                                 <th style="color: white;width: 10em;" bgcolor="#00008b">NGÀY BẮT ĐẦU</th>
                                                 <th style="color: white;width: 10em;" bgcolor="#8b0000">NGÀY KẾT THÚC</th>
                                             </b>
@@ -112,11 +116,12 @@
                                                 <td>{{ da.tenduan }}</td>
                                                 <td><b style="color: #4f1915">{{ da.chiphi }}</b> (VND)</td>
                                                 <td>{{ da.sothanhvien }} <b>THÀNH VIÊN</b></td>
+                                                <td>{{ da.nguoichiutrachnhiem }}</td>
                                                 <td><i>{{ da.ngaybatdau }}</i></td>
                                                 <td><i>{{ da.ngayketthuc }}</i></td>
                                                 <td>
-                                                    <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >Sửa</button>
-                                                    <button class="glyphicon glyphicon-remove btn btn-danger btn-xs btn-delete" ng-click="cfDelete(da.id)">Xóa</button>
+                                                    <button class="glyphicon glyphicon-pencil btn btn-default btn-xs btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',da.id)" >CHỈNH SỬA</button>
+                                                    <button class="glyphicon glyphicon-remove btn btn-danger btn-xl w-100 btn-delete" ng-click="cfDelete(da.id)">GỠ BỎ</button>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -148,12 +153,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-12 control-label">THÀNH VIÊN THAM GIA</label>
+                                                                <label for="inputEmail3" class="col-sm-12 control-label">SỐ THÀNH VIÊN THAM GIA</label>
                                                                 <div class="col-sm-9">
                                                                     <input type="text" class="form-control" id="sothanhvien" name="sothanhvien" placeholder="Vui lòng nhập số thành viên thực hiện" ng-model="sothanhvien" ng-required="true" >
                                                                     <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.sothanhvien.$error.required">Vui lòng nhập số thành viên thực hiện </span>
                                                                 </div>
                                                             </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputEmail3" class="col-sm-12 control-label">NGƯỜI PHỤ TRÁCH</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="nguoichiutrachnhiem" name="nguoichiutrachnhiem" placeholder="Vui lòng nhập người phụ trách" ng-model="nguoichiutrachnhiem" ng-required="true" >
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmDuAn.nguoichiutrachnhiem.$error.required">Vui lòng nhập người phụ trách</span>
+                                                                    </div>
+                                                                </div>
 
                                                             <div class="form-group">
                                                                 <label for="inputEmail3" class="col-sm-12 control-label">NGÀY BẮT ĐẦU DỰ ÁN</label>

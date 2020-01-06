@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em;font-size: 15px;">
+<nav class="navbar navbar-expand-sm navbar-dark bg-gradient-info" style="height: 2em;font-size: 15px;">
     <div class="navbar-collapse collapse w-25 order-1 order-xl-1 dual-collapse2">
         <ul class="navbar-nav mr-auto text-white">
             <b> BỘ PHẬN - THÀNH VIÊN</b>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="my-app" ng-controller="registerController">
+<html lang="en" ng-app="my-app" ng-controller="congvieccontroller" >
 <head>
     <meta charset="UTF-8" />
     <title>ADMIN</title>
@@ -20,7 +20,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-gradient-success" style="height: 2em">
     <div class="navbar-collapse collapse w-25 order-1 order-xl-0 dual-collapse2">
         <ul class="navbar-nav mr-auto text-white">
-           <b> BỘ PHẬN - TRƯỞNG NHÓM</b>
+            <b> BỘ PHẬN - TRƯỞNG NHÓM</b>
         </ul>
     </div>
 
@@ -58,7 +58,7 @@
         <li>
             <a href="thongtinduan">
                 <b style="color: lavender">
-                    <span class="text" >THÔNG TIN DỰ ÁN </span>
+                    <span class="text" >THÔNG TIN DỰ ÁN</span>
                 </b>
             </a>
         </li>
@@ -83,17 +83,13 @@
 
     <div style="width: 100%;background-color: #a5cae0" class="content" >
         <div class="container-fluid">
-            <br>
-            <nav >
-                <h5 class="bg-gradient-primary text-white"><b>QUẢN LÝ THÀNH VIÊN \</b></h5>
-            </nav>
+            <h3 style="color: #4f1915"><b>QUẢN LÝ CÔNG VIỆC CỦA THÀNH VIÊN</b> </h3>
             <br>
             <div class="row clearfix">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 ">
                     <!--                 <button class="w3-button w3-xlarge w3-circle w3-teal">+</button>-->
                     <div class="info-box hover-expand-effect">
                         <div class="icon">
-                            <button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w3-pink bg-gradient-secondary" ng-click="modal('add')"><b>+ THÊM MỚI THÀNH VIÊN DỰ ÁN</b></button>
                         </div>
 
                     </div>
@@ -111,30 +107,32 @@
                                         <div class="container bg-gradient-light">
                                             <table class="table table-bordered table-responsive table-striped ">
                                                 <thead>
-                                                <tr style="font-size: 13px; color: darkblue">
-                                                    <th>ID</th>
-                                                    <th style="width: 15em">HỌ VÀ TÊN</th>
-                                                    <th style="width: 15em">ĐỊA CHỈ</th>
-                                                    <th style="width: 13em">SỐ ĐIỆN THOẠI</th>
-                                                    <th style="width: 13em">EMAIL </th>
+                                                <h3 style="color: #122b40;">PHÂN BỔ CÔNG VIỆC</h3>
+                                                <tr style="font-size: 13px">
+                                                    <th style="width: 15em">THÀNH VIÊN THỰC HIỆN</th>
+                                                    <th style="width: 12em">VAI TRÒ</th>
+                                                    <th style="width: 13em">CHỨC NĂNG</th>
+                                                    <th style="width: 13em">TÊN CÔNG VIỆC</th>
+                                                    <th style="width: 13em">NHIỆM VỤ</th>
+                                                    <th><button id="btn-add"  data-toggle="modal" data-target="#myModal"  class="w3-button w3-lg w3 w-100 w3-pink bg-gradient-secondary" ng-click="modal('add')">➕ THÊM MỚI</button></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody style="color: #1c294e">
-                                                <tr ng-repeat="reg in users">
-                                                    <td>{{ reg.id }}</td>
-                                                    <td>{{ reg.hovaten }}</td>
-                                                    <td>{{ reg.diachi }}</td>
-                                                    <td>{{ reg.sdt }}</td>
-                                                    <td>{{ reg.email }}</td>
+                                                <tr ng-repeat="cog in congviecs">
+                                                    <td>{{ cog.tenthanhvien }}</td>
+
+                                                    <td>{{ cog.vaitro }}</td>
+                                                    <td>{{ cog.chucnang }}</td>
+                                                    <td>{{ cog.tencongviec }}</td>
+                                                    <td>{{ cog.nhiemvu }}</td>
                                                     <td>
-                                                        <button class="glyphicon glyphicon-pencil btn btn-default btn-xs w-100 btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',reg.id)" >CHỈNH SỬA</button>
-                                                        <button class="glyphicon glyphicon-remove btn btn-danger btn-xl w-100 btn-delete" ng-click="cfDelete(reg.id)">GỠ BỎ</button>
+                                                        <button class="glyphicon glyphicon-pencil btn btn-default btn-xs w-100 btn-detail bg-success text-white" id="btn-edit" data-toggle="modal" data-target="#myModal" ng-click="modal('edit',cog.id)" >CHỈNH SỬA</button>
+                                                        <button class="glyphicon glyphicon-remove btn btn-danger btn-xl w-100 btn-delete" ng-click="cfDelete(cog.id)">GỠ BỎ</button>
                                                     </td>
                                                 </tr>
                                                 </tbody>
-                                            </table>
 
-                                            <!-- Modal -->
+                                            </table>
                                             <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
                                                 <div class="modal-dialog " style="color: #1c294e;">
                                                     <div class="modal-content">
@@ -143,58 +141,60 @@
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                         </div>
                                                         <div class="modal-body" >
-                                                            <form name="frmuser" action="getAddregister" method="POST" class="form-horizontal">
+                                                            <form name="frmcongviec" action="addcongviec" method="POST" class="form-horizontal">
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-3 control-label">HỌ VÀ TÊN</label>
+                                                                    <label for="inputEmail3" class="col-sm-6 control-label">THÀNH VIÊN THỰC HIỆN</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="hovaten" name="hovaten" placeholder="Vui lòng nhập họ và tên" ng-model="hovaten" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.hovaten.$error.required">Vui lòng nhập họ và tên</span>
+                                                                        <input type="text" class="form-control" id="tenthanhvien" name="tenthanhvien" placeholder="Vui lòng nhập thành viên thực hiện" ng-model="tenthanhvien" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmcongviec.tenthanhvien.$error.required">Vui lòng nhập thành viên thực hiện </span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-3 control-label">ĐỊA CHỈ</label>
+                                                                    <label for="inputEmail3" class="col-sm-3 control-label">VAI TRÒ</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="diachi" name="diachi" placeholder="Vui lòng nhập chức năng" ng-model="diachi"  ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.diachi.$error.required">Vui lòng nhập Chức năng</span>
+                                                                        <input type="text" class="form-control" id="vaitro" name="vaitro" placeholder="Vui lòng nhập vai trò" ng-model="vaitro"  ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmcongviec.vaitro.$error.required">Vui lòng nhập vai trò</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-4 control-label">SỐ ĐIỆN THOẠI</label>
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">CHỨC NĂNG</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="sdt" name="sdt" placeholder="Vui lòng nhập số điện thoại" ng-model="sdt" ng-required="true" >
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.sdt.$error.required">vui lòng nhập số điện thoại</span>
+                                                                        <input type="text" class="form-control" id="chucnang" name="chucnang" placeholder="Vui lòng nhập chức năng" ng-model="chucnang" ng-required="true" >
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmcongviec.chucnang.$error.required">vui lòng nhập chức năng</span>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-4 control-label">EMAIL</label>
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">TÊN CÔNG VIỆC</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="email" name="email" placeholder="Vui lòng nhập địa chỉ Email" ng-model="email" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.email.$error.required">Vui lòng nhập tên đăng nhập</span>
+                                                                        <input type="text" class="form-control" id="tencongviec" name="tencongviec" placeholder="Vui lòng nhập tên công việc" ng-model="tencongviec" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmcongviec.tencongviec.$error.required">Vui lòng nhập tên công việc</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-4 control-label">MẬT KHẨU</label>
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">NHIỆM VỤ</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="matkhau" name="matkhau" placeholder="Vui lòng nhập địa chỉ Email" ng-model="matkhau" ng-required="true" />
-                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmuser.matkhau.$error.required">Vui lòng nhập tên đăng nhập</span>
+                                                                        <input type="text" class="form-control" id="nhiemvu" name="nhiemvu" placeholder="Vui lòng nhập nhiệm vụ" ng-model="nhiemvu" ng-required="true" />
+                                                                        <span style="color: red; padding-left:30px;" id="helpBlock2" class="help-block" ng-show="frmcongviec.nhiemvu.$error.required">Vui lòng nhập nhiệm vụ</span>
                                                                     </div>
                                                                 </div>
                                                             </form>
-
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-primary" ng-click="save(state,id)">Lưu</button>
+                                                            <button type="button" class="btn btn-primary" ng-click="save(state,id)">LƯU</button>
                                                         </div>
                                                     </div><!-- /.modal-content -->
                                                 </div><!-- /.modal-dialog -->
                                             </div><!-- /.modal -->
+                                            <!-- Modal -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br>
+
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="app/register.js"></script>
+    <script type="text/javascript" src="app/congviec.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 

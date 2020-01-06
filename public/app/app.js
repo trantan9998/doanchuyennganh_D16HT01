@@ -12,6 +12,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 				$scope.tenduan = null;
 				$scope.chiphi = null;
 				$scope.sothanhvien = null;
+				$scope.nguoichiutrachnhiem = null;
 				$scope.ngaybatdau = null;
 				$scope.ngayketthuc = null;
 				break;
@@ -23,6 +24,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 					$scope.tenduan = response.data.tenduan;
 					$scope.chiphi = response.data.chiphi;
 					$scope.sothanhvien = response.data.sothanhvien;
+					$scope.nguoichiutrachnhiem = response.data.nguoichiutrachnhiem;
 					$scope.ngaybatdau =  new Date(response.data.ngaybatdau);
 					$scope.ngayketthuc = new Date(response.data.ngayketthuc);
 				});
@@ -40,7 +42,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 			var url = 'http://127.0.0.1:8000/add';
 			var dateStart = $filter('date')(new Date($scope.ngaybatdau), 'MM/dd/yyyy');
 			var dateEnd = $filter('date')(new Date($scope.ngayketthuc), 'MM/dd/yyyy');
-			var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, ngaybatdau: dateStart, ngayketthuc: dateEnd});
+			var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, nguoichiutrachnhiem:$scope.nguoichiutrachnhiem, ngaybatdau: dateStart, ngayketthuc: dateEnd});
 			$http({
 				method : 'POST',
 				url: url,
@@ -56,7 +58,7 @@ app.controller('DuAnController',function($scope,$http,$filter){
 			var url = 'http://127.0.0.1:8000/'+'edit/'+ id;
 			var dateStart = $filter('date')(new Date($scope.ngaybatdau), 'MM/dd/yyyy');
 			var dateEnd = $filter('date')(new Date($scope.ngayketthuc), 'MM/dd/yyyy');
-            var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, ngaybatdau: dateStart, ngayketthuc: dateEnd});
+            var data = $.param({tenduan:$scope.tenduan, chiphi:$scope.chiphi, sothanhvien:$scope.sothanhvien, nguoichiutrachnhiem:$scope.nguoichiutrachnhiem, ngaybatdau: dateStart, ngayketthuc: dateEnd});
 			$http({
 				method : 'POST',
 				url: url,
